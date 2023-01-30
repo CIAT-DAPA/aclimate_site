@@ -44,7 +44,18 @@ function Home() {
             </section>
 
             <section id='section2'>
-                <Map></Map>
+                <Row className='m-0 align-items-center h-100'>
+                    <Col>
+                        <h2 className='text-center '>We are here</h2>
+                        <p className='font-link-body text-center p-subtitle'>
+                            Our work arrive in those countries making a great impact.
+                        </p>
+                    </Col>
+                    <Col className='h-100'>
+                        <Map></Map>
+                    </Col>
+                </Row>
+
             </section>
             <section >
                 <p className='font-link-body text-center p-subtitle'>

@@ -1,18 +1,21 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
+import { Button } from 'react-bootstrap';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 
 function Map() {
 
     return (
-        <>
-            <MapContainer center={[0,0]} scrollWheelZoom={false} style={{height: '600px', width: '600px'}}>
-                <TileLayer
-                    url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-                />
-            </MapContainer>
-
-        </>
+        <MapContainer center={[4.570868, -74.297333]} zoom={2} scrollWheelZoom={false} style={{ height: '100%' }}>
+            <TileLayer
+                url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+            />
+            <Marker position={[4.570868, -74.297333]}>
+                <Popup>
+                    Colombia <br /> <Button>Dirigete al sitio</Button>
+                </Popup>
+            </Marker>
+        </MapContainer>
     );
 }
 

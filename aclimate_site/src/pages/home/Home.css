@@ -11,8 +11,12 @@
 }
 
 #section2{
-    background-color: #012701;
+    background-color: #1a2422;
+    /* background-color: #3a4f31; */
     color: aliceblue;
+    /* color: #c9d6e0; */
+    /* color: #bec7c2; */
+     
 }
 
 .main-content{
@@ -30,6 +34,10 @@
 }
 
 h1{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+h2{
     font-family: 'Cormorant Garamond', serif;
 }
 
