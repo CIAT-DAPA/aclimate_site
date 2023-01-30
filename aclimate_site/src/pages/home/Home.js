@@ -1,15 +1,28 @@
-import { useRef } from "react";
-import useScrollSnap from "react-use-scroll-snap";
 import { Col, Container, Row } from 'react-bootstrap';
 import './Home.css';
+import React, { useState, useEffect } from 'react';
+import Map from '../../components/map/Map';
 
 function Home() {
-    const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 5, delay: 2 });
+
+    const [currentSection, setCurrentSection] = useState(0);
+    const sections = [...document.querySelectorAll('section')];
+    const handleScroll = () => {
+        const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+        if (scrollTop + clientHeight >= scrollHeight) {
+            setCurrentSection((currentSection + 1) % sections.length);
+            sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('scroll', handleScroll);
+        return () => document.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <div className='container-page' ref={scrollRef}>
-            <section className='main-content'>
+        <div className='container-page' style={{ scrollSnapType: "y mandatory" }}>
+            <section className='main-content' >
                 <Container className='m-0 p-0 d-flex align-items-center'>
                     <Row className="m-0 justify-content-center">
                         <Col className='col-9'>
@@ -29,7 +42,11 @@ function Home() {
                     </Row>
                 </Container>
             </section>
-            <section>
+
+            <section id='section2'>
+                <Map></Map>
+            </section>
+            <section >
                 <p className='font-link-body text-center p-subtitle'>
                     Quisque id mi quam. Donec interdum sapien elit, eu faucibus
                     orci viverra et. Quisque sed tortor nec nibh consequat
