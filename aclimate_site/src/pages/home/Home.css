@@ -1,54 +1,52 @@
-.container-page{
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+.container-page {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
-.container-page section{
-    scroll-snap-type: y mandatory;
-    scroll-snap-align: start;
-    height: 100vh;
+.container-page section {
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+  height: 100vh;
 }
 
-#section2{
-    background-color: #1a2422;
-    /* background-color: #3a4f31; */
-    color: aliceblue;
-    /* color: #c9d6e0; */
-    /* color: #bec7c2; */
-     
+#section2 {
+  background-color: #1a2422;
+  /* background-color: #3a4f31; */
+  color: aliceblue;
+  /* color: #c9d6e0; */
+  /* color: #bec7c2; */
 }
 
-.main-content{
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    color:white;
-    background-image: url(../../assets/images/bg2.jpg);
-    background-size: cover;
-  }
-
-.container{
-    background-color: rgba(0, 0, 0, 0.5);
-    max-width: none !important;
+.main-content {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  background-image: url(../../assets/images/bg2.jpg);
+  background-size: cover;
 }
 
-h1{
-    font-family: 'Cormorant Garamond', serif;
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: none !important;
 }
 
-h2{
-    font-family: 'Cormorant Garamond', serif;
+h1 {
+  font-family: "Cormorant Garamond", serif;
 }
 
-.text-title-principal{
-    letter-spacing: 50px;
-    font-size: 95px;
-    font-weight: 500;
-    text-shadow: 3px 2px 45px black;
+h2 {
+  font-family: "Cormorant Garamond", serif;
 }
 
-.p-subtitle{
-    text-shadow: 3px 2px 45px black;
+.text-title-principal {
+  letter-spacing: 50px;
+  font-size: 95px;
+  font-weight: 500;
+  text-shadow: 3px 2px 45px black;
 }
 
+.p-subtitle {
+  text-shadow: 3px 2px 45px black;
+}
