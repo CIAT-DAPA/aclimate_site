@@ -32,7 +32,7 @@ function Map() {
       {countries.map((country, index) => (
         <Marker key={index} position={[country.Latitud, country.Longitud]}>
           <Popup>
-            {country.Pais} <br /> <Button><a href={country.Link}>Dirigete al sitio</a></Button>
+            {country.Pais} <br /><a class="btn btn-primary text-light" href={country.Link} target="_blank" role="button">Dirigete al sitio</a>
           </Popup>
         </Marker>
       ))}
