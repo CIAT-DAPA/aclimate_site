@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
-import { Button } from "react-bootstrap";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "./Map.css";
 
 const URL_CSV_COUNTRIES =
   "https://raw.githubusercontent.com/CIAT-DAPA/aclimate_site/main/data/countries.csv";
@@ -27,6 +27,7 @@ function Map() {
       zoom={2}
       scrollWheelZoom={false}
       style={{ height: "100%" }}
+      className="hidden"
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {countries.map((country, index) => (

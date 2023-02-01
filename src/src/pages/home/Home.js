@@ -1,11 +1,15 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./Home.css";
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Map from "../../components/map/Map";
 import line from "../../assets/svg/line.svg";
-import person from "../../assets/images/catTemp.png";
+import person from "../../assets/images/portrait_men.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 function Home() {
+
+  //Dot scroll
   const handleClickNav = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     var idname = id.split("-");
@@ -47,9 +51,9 @@ function Home() {
   }
 
   const options = {
-    root:null,
+    root: null,
     rootMargin: "0px",
-    threshold:1.0
+    threshold: 1.0
   }
 
   useEffect(() => {
@@ -80,6 +84,22 @@ function Home() {
   }, [section3Ref, options])
 
 
+  //Animation scroll
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+      // else {
+      //   entry.target.classList.remove('show');
+      // }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+
   return (
     <div className="container-page" style={{ scrollSnapType: "y mandatory" }}>
       <div className="dot-container">
@@ -102,7 +122,7 @@ function Home() {
       <section className="main-content" id="section-1" ref={section1Ref}>
         <Container className="m-0 p-0 d-flex align-items-center">
           <Row className="m-0 justify-content-center">
-            <Col className="col-11">
+            <Col className="col-11 hidden">
               <h1 className="text-center text-title-principal"> ACLIMATE</h1>
               <p className="font-link-body text-center p-subtitle">
                 Quisque id mi quam. Donec interdum sapien elit, eu faucibus orci
@@ -122,39 +142,35 @@ function Home() {
 
       <section id="section-2" ref={section2Ref}>
         <Row className="m-0 align-items-center h-100">
-          <Col className="align-items-center d-flex flex-column">
+          <Col className="align-items-center d-flex flex-column hidden" >
+
             <h2 className="text-center ">We are here</h2>
             <p className="font-link-body text-center p-subtitle">
               Quisque id mi quam. Donec interdum sapien elit, eu faucibus orci
               viverra et. Quisque sed tortor nec nibh consequat molestie. Donec
               non sapien eu elit cursus varius id quis tellus.
             </p>
-            <br />
-            <img src={line} className="img-fluid w-75" style={{}}></img>
+            <img src={line} className="img-fluid opacity-75" style={{ width: "260px", height: "40px" }}></img>
+
+
           </Col>
           <Col className="h-100">
-            <Map></Map>
+            <Map className=""></Map>
           </Col>
         </Row>
       </section>
       <section id="section-3" ref={section3Ref}>
         <Row className="m-0 align-items-center h-100">
-          <Col className="align-items-center d-flex flex-column ">
-            <img src={person} className="img-fluid w-50" style={{}}></img>
-            <h3 className="text-center mt-4">Julian Ramirez</h3>
+          <Col className="align-items-center d-flex flex-column hidden">
+            <img src={person} className="img-fluid w-75" style={{}}></img>
           </Col>
-          <Col className="align-items-center d-flex flex-column">
-            <h2 className="text-center ">Contact us</h2>
-            <p className="font-link-body text-center p-subtitle">
-              Our mission is at feugiat nunc placerat at. Aenean vestibulum eros
-              et dui suscipit, sit amet ultrices erat eleifend. Pellentesque
-              eget sapien eget justo accumsan scelerisque ut id diam.
+          <Col>
+            <h1 className="hidden contact-1">Contact us</h1>
+            <p className="hidden contact-2"><strong>Julian Ramirez | </strong><small>Principal Scientist | Climate Action</small></p>
+            <p className="hidden contact-3">
+              <FontAwesomeIcon icon={faEnvelope} /> Email: J.R.Villegas@cgiar.org
             </p>
-            <p className="font-link-body text-center p-subtitle">
-              Email: dasfasdad@cgiar.org
-            </p>
-            <br />
-            <img src={line} className="img-fluid w-75" style={{}}></img>
+
           </Col>
         </Row>
       </section>

@@ -17,14 +17,16 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .container-page {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 #section-2 {
-  background-color: #1a2422;
+  /* background-color: #1a2422; */
+  background-image: url(../../assets/images/bg-section2.png);
   /* background-color: #3a4f31; */
-  color: aliceblue;
   color: #fefae0;
   /* color: #bec7c2; */
 }
@@ -65,8 +67,8 @@ h3 {
 }
 
 .text-title-principal {
-  letter-spacing: 50px;
-  font-size: 95px;
+  letter-spacing: 0.7em;
+  font-size: 6em;
   font-weight: 500;
   text-shadow: 3px 2px 45px black;
 }
@@ -76,8 +78,8 @@ h3 {
 }
 
 .dot {
-  height: 15px;
-  width: 15px;
+  height: 1.5vh;
+  width: 1.5vh;
   margin-bottom: 10px;
   background-color: #bbb;
   border-radius: 50%;
@@ -88,6 +90,7 @@ h3 {
 .dot:hover {
   cursor: pointer;
   background-color: rgb(117, 117, 117);
+  transform: scale3d(1.5, 1.5, 1.5);
 }
 
 .dot-active {
@@ -98,7 +101,29 @@ h3 {
 
 .dot-container {
   position: fixed;
-  right: 25px;
+  right: 1.5%;
   top: 45%;
   z-index: 1000;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+
+.show {
+  filter: blur(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.contact-2 {
+  transition-delay: 200ms;
+}
+
+.contact-3 {
+  transition-delay: 400ms;
 }

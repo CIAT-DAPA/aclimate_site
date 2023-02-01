@@ -1,0 +1,11 @@
+.menu {
+    background-color: #3a4f31;
+    z-index: 2000;
+    opacity: 0.2;
+    transition: all 0.5s;
+    color: #fefae0;
+}
+
+.menu:hover {
+    opacity: 1;
+}
