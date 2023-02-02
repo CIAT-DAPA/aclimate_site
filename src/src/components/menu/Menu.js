@@ -13,8 +13,9 @@ function Menu() {
                 <Link className="navbar-brand" to="/">Aclimate</Link>
                 <Nav className="justify-content-end">
                     <Link className="nav-link" to="/Partners " >Partners</Link>
-                    <Link className="nav-link" to="/" >Experiences</Link>
-                    <Link className="nav-link" to="/" >Publications</Link>
+                    {/* <Link className="nav-link" to="/" >Experiences</Link> Change to News */}
+                    {/* <Link className="nav-link" to="/Publications" >Publications</Link> */}
+                    <Link className="nav-link" to="/News" >News</Link>
                 </Nav>
             </Container>
         </Navbar>
