@@ -5,10 +5,10 @@ import { Col, Row } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 
-const URL_NEWS_DATA = "https://github.com/CIAT-DAPA/aclimate_site/blob/main/data/news.csv";
+const URL_NEWS_DATA =
+  "https://raw.githubusercontent.com/CIAT-DAPA/aclimate_site/main/data/news.csv";
 
 function News() {
-
   const [news, setNews] = useState([]);
 
   useEffect(() => {
@@ -25,20 +25,24 @@ function News() {
   console.log(news);
 
   return (
-    <Row style={{ height: "10rem" }}>
+    <div>
+    {news.map((e, index) => (
+      <Row style={{ height: "10rem" }}>
       <Col className="h-100 col-2">
         <img src={Logo} className="img-fluid h-100" />
       </Col>
       <Col>
-        <h5>Card Title</h5>
-        <p class="text-muted">Date: 26/03/2021</p>
+        <h5>{e.Titulo}</h5>
+        <p class="text-muted">Date: {e.Fecha}</p>
         <p className="fs-6">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {e.Resumen}
         </p>
-        <Button variant="primary">Go to article</Button>
+        <Button variant="primary" href={e.Link} target="_blank">Go to article</Button>
       </Col>
     </Row>
+    ))}
+    
+    </div>
   );
 }
 
