@@ -23,9 +23,9 @@ function Map() {
 
   return (
     <MapContainer
-      center={[4.570868, -74.297333]}
+      center={[14.88, -35,76]}
       zoom={2}
-      scrollWheelZoom={false}
+      scrollWheelZoom={true}
       style={{ height: "100%" }}
       className="hidden"
     >
