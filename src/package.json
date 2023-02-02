@@ -1,7 +1,7 @@
 {
   "name": "aclimate_site",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://CIAT-DAPA.github.io/aclimate_site",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
