@@ -1,5 +1,4 @@
 import "./News.css";
-import Logo from "../../assets/images/logo.png";
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import New from "../../components/new/New";
@@ -21,7 +20,6 @@ function News() {
     });
   }, []);
 
-
   return (
     <div>
       <div className="mb-4 text-white bg-title">
@@ -34,9 +32,11 @@ function News() {
         </div>
       </div>
       {
-        news.map((e, index) => (
-          <New key={index} image={e.Image} title={e.Titulo} date={e.Fecha} summary={e.Resumen} link={e.Link} delay={index * 100} />
-        ))
+        news
+          .sort((a, b) => new Date(b.Fecha) - new Date(a.Fecha))
+          .map((e, index) => (
+            <New key={index} image={e.Image} title={e.Titulo} date={e.Fecha} summary={e.Resumen} link={e.Link} delay={index * 100} />
+          ))
       }
     </div >
   );

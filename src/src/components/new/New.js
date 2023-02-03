@@ -22,18 +22,17 @@ function New(props) {
             observer.disconnect();
         };
     }, []);
-
     return (
         <a href={props.link} target="_blank" rel="noreferrer" className='link-news '>
-            <Row style={{}} className="m-0 p-4 border-bottom border-2 my-3 hidden-news" ref={hiddenElement}>
+            <Row style={{}} className="m-0 p-4 border-bottom border-2 my-3 hidden-news flex-column flex-lg-row" ref={hiddenElement}>
                 <Col className='col-1'>
-                    <p class="text-muted">Date: {props.date}</p>
+                    <p class="text-muted">{props.date}</p>
                 </Col>
                 <Col className="p-0">
                     <h5>{props.title}</h5>
                     <p className="fs-6">{props.summary}</p>
                 </Col>
-                <Col className="col-2 col-xxl-1">
+                <Col className="align-self-center col-lg-4 col-xxl-3">
                     <img src={props.image} alt="" className="img-fluid" />
                 </Col>
             </Row>
