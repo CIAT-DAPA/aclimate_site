@@ -3,7 +3,7 @@ import "./Home.css";
 import React, { useEffect, useRef, useState } from "react";
 import Map from "../../components/map/Map";
 import line from "../../assets/svg/line.svg";
-import person from "../../assets/images/portrait_men.png";
+import julian from "../../assets/images/Julian.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
@@ -162,7 +162,7 @@ function Home() {
       <section id="section-3" ref={section3Ref}>
         <Row className="m-0 align-items-center h-100">
           <Col className="align-items-center d-flex flex-column hidden">
-            <img src={person} className="img-fluid w-75" style={{}}></img>
+            <img src={julian} className="img-fluid w-75" style={{}}></img>
           </Col>
           <Col>
             <h1 className="hidden contact-1">Contact us</h1>
