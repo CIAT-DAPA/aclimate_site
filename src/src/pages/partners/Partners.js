@@ -1,7 +1,36 @@
 import CountryPartner from '../../components/countryPartner/CountryPartner';
 import './Partners.css'
+import React, { useState, useEffect } from "react";
+import Papa from "papaparse";
+
+const URL_PARTNERS_DATA =
+    "https://raw.githubusercontent.com/CIAT-DAPA/aclimate_site/main/data/partners.csv";
 
 function Partners() {
+
+    const [partners, setPartners] = useState([]);
+    const [groupedPartners, setGroupedPartners] = useState({});
+
+    useEffect(() => {
+        Papa.parse(URL_PARTNERS_DATA, {
+            download: true,
+            header: true,
+            dynamicTyping: true,
+            complete: (results) => {
+                setPartners(results.data);
+
+                const grouped = results.data.reduce((acc, partner) => {
+                    const country = partner.Pais;
+                    if (!acc[country]) {
+                        acc[country] = [];
+                    }
+                    acc[country].push(partner);
+                    return acc;
+                }, {});
+                setGroupedPartners(grouped);
+            },
+        });
+    }, []);
 
     return (
         <div>
@@ -14,9 +43,13 @@ function Partners() {
                     </div>
                 </div>
             </div>
-            {/* <CountryPartner country=""></CountryPartner> */}
+            <div className='px-5'>
+                {Object.keys(groupedPartners).map((country) => (
+                    < CountryPartner key={country} country={country} partners={groupedPartners[country]} />
+                ))}
+            </div>
         </div >
-    )
+    );
 }
 
 export default Partners;
