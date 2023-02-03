@@ -1,22 +1,43 @@
-import { Button, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
+import React, { useEffect, useRef } from 'react';
 import './New.css';
 
 function New(props) {
 
+    const hiddenElement = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('show-news');
+                    }, props.delay);
+                }
+            });
+        });
+
+        observer.observe(hiddenElement.current);
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
     return (
-        <Row style={{ height: "10rem" }} className="m-0 px-4 border-bottom border-2 my-3">
-            <Col className="h-100 col-2">
-                <img src={props.image} alt="" className="img-fluid h-100" />
-            </Col>
-            <Col className="p-0">
-                <h5>{props.title}</h5>
-                <p class="text-muted">Date: {props.date}</p>
-                <p className="fs-6">{props.summary}</p>
-                <Button variant="primary" href={props.link} target="_blank">
-                    Go to article
-                </Button>
-            </Col>
-        </Row>
+        <a href={props.link} target="_blank" rel="noreferrer" className='link-news '>
+            <Row style={{}} className="m-0 p-4 border-bottom border-2 my-3 hidden-news" ref={hiddenElement}>
+                <Col className='col-1'>
+                    <p class="text-muted">Date: {props.date}</p>
+                </Col>
+                <Col className="p-0">
+                    <h5>{props.title}</h5>
+                    <p className="fs-6">{props.summary}</p>
+                </Col>
+                <Col className="col-2 col-xxl-1">
+                    <img src={props.image} alt="" className="img-fluid" />
+                </Col>
+            </Row>
+        </a>
     )
 }
 

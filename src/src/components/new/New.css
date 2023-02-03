@@ -1,0 +1,19 @@
+.link-news {
+    text-decoration: none;
+    color: black;
+    transition: color 0.5s;
+}
+
+.hidden-news {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: transform 1s;
+}
+
+
+.show-news {
+    filter: blur(0);
+    transform: translateX(0);
+    opacity: 1;
+}

@@ -21,21 +21,24 @@ function News() {
     });
   }, []);
 
-  console.log(news);
 
   return (
     <div>
-      <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-        <div class="col-md-6 px-0">
-          <h1 class="display-4">
-            News about Aclimate
-          </h1>
+      <div className="mb-4 text-white bg-title">
+        <div className="container pb-3 px-4 container-news" style={{}}>
+          <div className="col-md-6 px-0">
+            <h1 className="display-4">
+              News about Aclimate
+            </h1>
+          </div>
         </div>
       </div>
-      {news.map((e, index) => (
-        <New key={index} image={Logo} title={e.Titulo} date={e.Fecha} summary={e.Resumen} link={e.Link} />
-      ))}
-    </div>
+      {
+        news.map((e, index) => (
+          <New key={index} image={e.Image} title={e.Titulo} date={e.Fecha} summary={e.Resumen} link={e.Link} delay={index * 100} />
+        ))
+      }
+    </div >
   );
 }
 
