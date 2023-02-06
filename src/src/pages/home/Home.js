@@ -12,18 +12,17 @@ function Home() {
   //Dot scroll
   const handleClickNav = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    var idname = id.split("-");
-    if (id == "section-1") {
+    if (id === "section-1") {
       document.getElementById(1).classList.add("dot-active");
       document.getElementById(2).classList.remove("dot-active");
       document.getElementById(3).classList.remove("dot-active");
     }
-    if (id == "section-2") {
+    if (id === "section-2") {
       document.getElementById(1).classList.remove("dot-active");
       document.getElementById(2).classList.add("dot-active");
       document.getElementById(3).classList.remove("dot-active");
     }
-    if (id == "section-3") {
+    if (id === "section-3") {
       document.getElementById(1).classList.remove("dot-active");
       document.getElementById(2).classList.remove("dot-active");
       document.getElementById(3).classList.add("dot-active");
