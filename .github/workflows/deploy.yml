@@ -1,18 +1,23 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy
 on:
   push:
     branches:
       - main
+permissions:
+  contents: write
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
 
-    - name: Build and deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: ./
+      - name: Install and Build 🔧
+        uses: actions/setup-node@v3
+        env:
+          CI: false
+        run: |
+          cd src/
+          npm ci
+          npm install -g gh-pages --save-dev
+          npm run deploy
