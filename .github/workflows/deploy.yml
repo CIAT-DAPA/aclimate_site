@@ -18,6 +18,8 @@ jobs:
           CI: false
         run: |
           cd src/
+          git config --global user.email "sebastian.lopez_Ast@uao.edu.co"
+          git config --global user.name "Sebastian Lopez"
           npm ci
           npm install -g gh-pages --save-dev
           npm run deploy
