@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Menu.css'
 import { Link } from 'react-router-dom'
+import { Button, ButtonGroup, Dropdown } from 'react-bootstrap';
 
 function Menu() {
 
@@ -17,6 +18,16 @@ function Menu() {
                     {/* <Link className="nav-link" to="/Publications" >Publications</Link> */}
                     <a className='nav-link' href='https://docs.aclimate.org/en/latest/' target="_blank" rel="noreferrer">Documentation</a>
                     <Link className="nav-link" to="/News" >News</Link>
+                    <Dropdown as={ButtonGroup}>
+                        <Button>EN</Button>
+
+                        <Dropdown.Toggle split id="dropdown-split-basic" />
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">ES</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">EN</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </Nav>
             </Container>
         </Navbar>

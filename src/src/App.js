@@ -7,7 +7,7 @@ import News from "./pages/news/News";
 
 function App() {
   return (
-    <Router basename="/aclimate_site">
+    <Router>
       <Menu />
       <Routes>
         <Route exact path="/" element={<Home />} />
