@@ -23,7 +23,7 @@ function Map() {
 
   return (
     <MapContainer
-      center={[14.88, -35,76]}
+      center={[14.88, -35, 76]}
       zoom={2}
       scrollWheelZoom={true}
       style={{ height: "100%" }}
@@ -33,11 +33,12 @@ function Map() {
       {countries.map((country, index) => (
         <Marker key={index} position={[country.Latitud, country.Longitud]}>
           <Popup>
-            {country.Pais} <br /><a class="btn btn-primary text-light" href={country.Link} target="_blank" role="button">Dirigete al sitio</a>
+            {country.Pais} <br /><a class="btn btn-primary text-light" href={country.Link} target="_blank" rel="noreferrer" role="button">Dirigete al sitio</a>
           </Popup>
         </Marker>
-      ))}
-    </MapContainer>
+      ))
+      }
+    </MapContainer >
   );
 }
 

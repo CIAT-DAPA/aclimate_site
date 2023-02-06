@@ -8,7 +8,6 @@ const URL_PARTNERS_DATA =
 
 function Partners() {
 
-    const [partners, setPartners] = useState([]);
     const [groupedPartners, setGroupedPartners] = useState({});
 
     useEffect(() => {
@@ -17,7 +16,6 @@ function Partners() {
             header: true,
             dynamicTyping: true,
             complete: (results) => {
-                setPartners(results.data);
 
                 const grouped = results.data.reduce((acc, partner) => {
                     const country = partner.Pais;

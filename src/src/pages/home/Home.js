@@ -147,7 +147,7 @@ function Home() {
             <p className="font-link-body text-center p-subtitle">
               Come and explore the world of Aclimate! Our innovative platform is changing the way farmers plan and prepare for the growing season ahead. And the best part? It's available in multiple countries, so no matter where you are, you can get information. Take a moment to check out our website and see if Aclimate is operating in your country. We're constantly expanding, so you never know, we might be coming to your area soon.
             </p>
-            <img src={line} className="img-fluid opacity-75" style={{ width: "260px", height: "40px" }}></img>
+            <img src={line} alt="line decoration" className="img-fluid opacity-75" style={{ width: "260px", height: "40px" }}></img>
 
 
           </Col>
@@ -159,7 +159,7 @@ function Home() {
       <section id="section-3" ref={section3Ref}>
         <Row className="m-0 align-items-center h-100">
           <Col className="align-items-center d-flex flex-column hidden">
-            <img src={julian} className="img-fluid w-75" style={{}}></img>
+            <img src={julian} alt="Julian" className="img-fluid w-75" style={{}}></img>
           </Col>
           <Col>
             <h1 className="hidden contact-1">Contact us</h1>

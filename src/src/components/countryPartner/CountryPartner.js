@@ -1,5 +1,5 @@
 import "./CountryPartner.css"
-import { Col, Container, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import React, { useEffect, useRef } from 'react';
 import Partner from "../partner/Partner";
 
