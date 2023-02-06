@@ -15,6 +15,7 @@ function Menu() {
                     <Link className="nav-link" to="/Partners " >Partners</Link>
                     {/* <Link className="nav-link" to="/" >Experiences</Link> Change to News */}
                     {/* <Link className="nav-link" to="/Publications" >Publications</Link> */}
+                    <a className='nav-link' href='https://docs.aclimate.org/en/latest/' target="_blank" rel="noreferrer">Documentation</a>
                     <Link className="nav-link" to="/News" >News</Link>
                 </Nav>
             </Container>

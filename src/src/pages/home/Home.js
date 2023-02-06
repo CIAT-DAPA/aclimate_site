@@ -137,9 +137,7 @@ function Home() {
 
             <h2 className="text-center ">We are here</h2>
             <p className="font-link-body text-center p-subtitle">
-              Quisque id mi quam. Donec interdum sapien elit, eu faucibus orci
-              viverra et. Quisque sed tortor nec nibh consequat molestie. Donec
-              non sapien eu elit cursus varius id quis tellus.
+              Come and explore the world of Aclimate! Our innovative platform is changing the way farmers plan and prepare for the growing season ahead. And the best part? It's available in multiple countries, so no matter where you are, you can get information. Take a moment to check out our website and see if Aclimate is operating in your country. We're constantly expanding, so you never know, we might be coming to your area soon.
             </p>
             <img src={line} className="img-fluid opacity-75" style={{ width: "260px", height: "40px" }}></img>
 
