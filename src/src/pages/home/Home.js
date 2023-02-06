@@ -9,6 +9,14 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 function Home() {
 
+  //Google Analytics
+  useEffect(() => {
+    window.gtag('config', 'G-89L0L1GCNH', {
+      page_path: window.location.pathname,
+    });
+  }, []);
+
+
   //Dot scroll
   const handleClickNav = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
