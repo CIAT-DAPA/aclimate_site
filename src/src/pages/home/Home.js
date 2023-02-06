@@ -125,15 +125,7 @@ function Home() {
             <Col className="col-11 hidden">
               <h1 className="text-center text-title-principal"> ACLIMATE</h1>
               <p className="font-link-body text-center p-subtitle">
-                Quisque id mi quam. Donec interdum sapien elit, eu faucibus orci
-                viverra et. Quisque sed tortor nec nibh consequat molestie.
-                Donec non sapien eu elit cursus varius id quis tellus. Integer
-                semper ex sit amet lacus sagittis accumsan. Nulla sollicitudin
-                commodo consequat. Nam semper suscipit urna id ornare. Duis
-                tristique commodo nulla, at feugiat nunc placerat at. Aenean
-                vestibulum eros et dui suscipit, sit amet ultrices erat
-                eleifend. Pellentesque eget sapien eget justo accumsan
-                scelerisque ut id diam.
+                Aclimate is a platform that provides climate and agroclimatic forecasts to farmers and extension agents in order to help them make informed decisions related to agriculture. The platform offers accurate and up-to-date information about expected weather patterns and climate conditions, which allows farmers to plan and prepare for the growing season ahead. By providing seasonal climate forecasts, Aclimate aims to reduce the risks associated with agriculture and increase food security in the region. The platform is designed to be user-friendly and accessible, providing farmers and extension agents with the information they need to make informed decisions about planting, harvesting, and managing their crops. With its focus on providing seasonal climate forecasts, Aclimate is helping to improve the sustainability and productivity of agriculture in the region and contributing to the development of a more resilient and sustainable food system.
               </p>
             </Col>
           </Row>
