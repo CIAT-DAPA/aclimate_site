@@ -18,7 +18,8 @@ jobs:
         env:
           CI: false
         run: |
-          git config --global user.email sebastian.lopez_Ast@uao.edu.co
+          git config --global user.name "Minotriz02"
+          git config --global user.email "sebastian.lopez_Ast@uao.edu.co"
           cd src/
           npm ci
           npm install -g gh-pages --save-dev
