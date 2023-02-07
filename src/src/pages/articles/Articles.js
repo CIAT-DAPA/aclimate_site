@@ -9,7 +9,7 @@ const URL_NEWS_DATA =
 
 
 function Articles() {
-
+    const [t, i18n] = useTranslation("global")
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
@@ -29,7 +29,7 @@ function Articles() {
                 <div className="container pb-3 px-4 container-news" style={{}}>
                     <div className="col-md-6 px-0">
                         <h1 className="display-4">
-                            Articles about Aclimate
+                            {t("articles.articles-title")}
                         </h1>
                     </div>
                 </div>

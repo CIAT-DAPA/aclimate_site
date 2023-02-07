@@ -35,9 +35,9 @@ function New(props) {
                     <h5>{props.title}</h5>
                     <p className="fs-6">{i18n.language === "es" ? props.summaryEs : props.summaryEn}</p>
                 </Col>
-                <Col className="align-self-center col-lg-4 col-xxl-3">
+                {props.image && <Col className="align-self-center col-lg-4 col-xxl-3">
                     <img src={props.image} alt="" className="img-fluid" />
-                </Col>
+                </Col>}
             </Row>
         </a>
     )
