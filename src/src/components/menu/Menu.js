@@ -30,7 +30,7 @@ function Menu() {
                 <Link className="navbar-brand" to="/">Aclimate</Link>
                 <Nav className="justify-content-end">
                     <Link className="nav-link" to="/News" >{t("menu.news")}</Link>
-                    <Link className="nav-link" to="/Publications" >{t("menu.articles")}</Link>
+                    <Link className="nav-link" to="/Articles" >{t("menu.articles")}</Link>
                     <Link className="nav-link" to="/Partners " >{t("menu.partners")}</Link>
                     <a className='nav-link' href='https://docs.aclimate.org/en/latest/' target="_blank" rel="noreferrer">{t("menu.documentation")}</a>
 
