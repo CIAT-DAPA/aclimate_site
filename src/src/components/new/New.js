@@ -8,7 +8,6 @@ function New(props) {
     const hiddenElement = useRef(null);
     const [t, i18n] = useTranslation("global")
 
-    console.log(i18n)
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {

@@ -68,9 +68,27 @@ h3 {
 
 .text-title-principal {
   letter-spacing: 0.7em;
-  font-size: 6em;
+  font-size: 2em;
   font-weight: 500;
   text-shadow: 3px 2px 45px black;
+}
+
+/* Small devices (landscape phones, 576px and up)
+Medium devices (tablets, 768px and up)
+Large devices (desktops, 992px and up)
+X-Large devices (large desktops, 1200px and up)
+XX-Large devices (larger desktops, 1400px and up) */
+
+@media (min-width: 768px) {
+  .text-title-principal {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-title-principal {
+    font-size: 6em;
+  }
 }
 
 .p-subtitle {
