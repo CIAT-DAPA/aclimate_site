@@ -1,11 +1,24 @@
 import { Col, Row } from 'react-bootstrap';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './New.css';
+import { useTranslation } from 'react-i18next';
 
 function New(props) {
 
     const hiddenElement = useRef(null);
+    const [t, i18n] = useTranslation("global")
+    // const [language, setLanguage] = useState(
+    //     window.localStorage.getItem("language") || "es"
+    // );
 
+    // useEffect(() => {
+    //     const updateLanguage = () => setLanguage(window.localStorage.getItem("language") || "es");
+    //     window.addEventListener("storage", updateLanguage);
+    //     return () => {
+    //         window.removeEventListener("storage", updateLanguage);
+    //     };
+    // }, []);
+    console.log(i18n)
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -30,7 +43,7 @@ function New(props) {
                 </Col>
                 <Col className="p-0">
                     <h5>{props.title}</h5>
-                    <p className="fs-6">{props.summary}</p>
+                    <p className="fs-6">{i18n.language === "es" ? props.summaryEs : props.summaryEn}</p>
                 </Col>
                 <Col className="align-self-center col-lg-4 col-xxl-3">
                     <img src={props.image} alt="" className="img-fluid" />

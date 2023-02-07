@@ -1,0 +1,14 @@
+{
+    "menu": {
+        "news": "Noticias",
+        "articles": "Artículos",
+        "partners": "Socios",
+        "documentation": "Documentación"
+    },
+    "map": {
+        "to-site": "Dirigete al sitio"
+    },
+    "header": {
+        "hello-world": "Hola Mundo"
+    }
+}

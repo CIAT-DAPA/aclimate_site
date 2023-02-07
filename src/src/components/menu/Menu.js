@@ -4,8 +4,24 @@ import Navbar from 'react-bootstrap/Navbar';
 import './Menu.css'
 import { Link } from 'react-router-dom'
 import { Button, ButtonGroup, Dropdown } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
+import React, { useState, useEffect } from "react";
 
 function Menu() {
+
+    const [t, i18n] = useTranslation("global")
+    const [language, setLanguage] = useState(
+        window.localStorage.getItem("language") || "es"
+    );
+
+    useEffect(() => {
+        window.localStorage.setItem("language", language);
+        i18n.changeLanguage(language);
+    }, [language, i18n]);
+
+    const handleLanguageChange = (language) => {
+        setLanguage(language);
+    };
 
     return (
 
@@ -13,19 +29,19 @@ function Menu() {
             <Container className='py-1'>
                 <Link className="navbar-brand" to="/">Aclimate</Link>
                 <Nav className="justify-content-end">
-                    <Link className="nav-link" to="/Partners " >Partners</Link>
-                    {/* <Link className="nav-link" to="/" >Experiences</Link> Change to News */}
-                    {/* <Link className="nav-link" to="/Publications" >Publications</Link> */}
-                    <a className='nav-link' href='https://docs.aclimate.org/en/latest/' target="_blank" rel="noreferrer">Documentation</a>
-                    <Link className="nav-link" to="/News" >News</Link>
-                    <Dropdown as={ButtonGroup}>
-                        <Button>EN</Button>
+                    <Link className="nav-link" to="/News" >{t("menu.news")}</Link>
+                    <Link className="nav-link" to="/Publications" >{t("menu.articles")}</Link>
+                    <Link className="nav-link" to="/Partners " >{t("menu.partners")}</Link>
+                    <a className='nav-link' href='https://docs.aclimate.org/en/latest/' target="_blank" rel="noreferrer">{t("menu.documentation")}</a>
 
-                        <Dropdown.Toggle split id="dropdown-split-basic" />
+                    <Dropdown as={ButtonGroup}>
+                        <Button variant='outline-secondary' className='text-uppercase disabled'>{window.localStorage.getItem("language") || "es"}</Button>
+
+                        <Dropdown.Toggle variant='outline-secondary' split id="dropdown-split-basic" />
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">ES</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">EN</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleLanguageChange("es")}>ES</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleLanguageChange("en")}>EN</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Nav>

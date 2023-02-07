@@ -6,8 +6,12 @@ import line from "../../assets/svg/line.svg";
 import julian from "../../assets/images/Julian.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { useTranslation } from "react-i18next"
 
 function Home() {
+
+  //Translation
+  const [t, i18n] = useTranslation("global");
 
   //Google Analytics
   useEffect(() => {
@@ -132,6 +136,7 @@ function Home() {
             <Col className="col-11 hidden">
               <h1 className="text-center text-title-principal"> ACLIMATE</h1>
               <p className="font-link-body text-center p-subtitle">
+                <h2>{t("header.hello-world")}</h2>
                 Aclimate is a platform that provides climate and agroclimatic forecasts to farmers and extension agents in order to help them make informed decisions related to agriculture. The platform offers accurate and up-to-date information about expected weather patterns and climate conditions, which allows farmers to plan and prepare for the growing season ahead. By providing seasonal climate forecasts, Aclimate aims to reduce the risks associated with agriculture and increase food security in the region. The platform is designed to be user-friendly and accessible, providing farmers and extension agents with the information they need to make informed decisions about planting, harvesting, and managing their crops. With its focus on providing seasonal climate forecasts, Aclimate is helping to improve the sustainability and productivity of agriculture in the region and contributing to the development of a more resilient and sustainable food system.
               </p>
             </Col>

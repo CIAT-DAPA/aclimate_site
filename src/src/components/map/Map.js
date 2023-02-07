@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "./Map.css";
+import { useTranslation } from 'react-i18next';
 
 const URL_CSV_COUNTRIES =
   "https://raw.githubusercontent.com/CIAT-DAPA/aclimate_site/main/data/countries.csv";
 
 function Map() {
-
+  const [t, i18n] = useTranslation("global")
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -33,7 +34,7 @@ function Map() {
       {countries.map((country, index) => (
         <Marker key={index} position={[country.Latitud, country.Longitud]}>
           <Popup>
-            {country.Pais} <br /><a class="btn btn-primary text-light" href={country.Link} target="_blank" rel="noreferrer" role="button">Dirigete al sitio</a>
+            {country.Pais} <br /><a class="btn btn-primary text-light" href={country.Link} target="_blank" rel="noreferrer" role="button">{t("map.to-site")}</a>
           </Popup>
         </Marker>
       ))

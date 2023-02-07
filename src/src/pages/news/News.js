@@ -35,7 +35,7 @@ function News() {
         news
           .sort((a, b) => new Date(b.Fecha) - new Date(a.Fecha))
           .map((e, index) => (
-            <New key={index} image={e.Image} title={e.Titulo} date={e.Fecha} summary={e.Resumen} link={e.Link} delay={index * 100} />
+            <New key={index} image={e.Image} title={e.Titulo} date={e.Fecha} summaryEs={e.ResumenEs} summaryEn={e.ResumenEn} link={e.Link} delay={index * 100} />
           ))
       }
     </div >

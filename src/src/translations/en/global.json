@@ -1,0 +1,14 @@
+{
+    "menu": {
+        "news": "News",
+        "articles": "Articles",
+        "partners": "Partners",
+        "documentation": "Documentation"
+    },
+    "map": {
+        "to-site": "Go to the site"
+    },
+    "header": {
+        "hello-world": "Hello World"
+    }
+}
