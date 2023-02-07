@@ -7,17 +7,7 @@ function New(props) {
 
     const hiddenElement = useRef(null);
     const [t, i18n] = useTranslation("global")
-    // const [language, setLanguage] = useState(
-    //     window.localStorage.getItem("language") || "es"
-    // );
 
-    // useEffect(() => {
-    //     const updateLanguage = () => setLanguage(window.localStorage.getItem("language") || "es");
-    //     window.addEventListener("storage", updateLanguage);
-    //     return () => {
-    //         window.removeEventListener("storage", updateLanguage);
-    //     };
-    // }, []);
     console.log(i18n)
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {

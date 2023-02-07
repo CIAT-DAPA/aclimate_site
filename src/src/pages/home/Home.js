@@ -136,7 +136,7 @@ function Home() {
             <Col className="col-11 hidden">
               <h1 className="text-center text-title-principal"> ACLIMATE</h1>
               <p className="font-link-body text-center p-subtitle">
-                Aclimate is a platform that provides climate and agroclimatic forecasts to farmers and extension agents in order to help them make informed decisions related to agriculture. The platform offers accurate and up-to-date information about expected weather patterns and climate conditions, which allows farmers to plan and prepare for the growing season ahead. By providing seasonal climate forecasts, Aclimate aims to reduce the risks associated with agriculture and increase food security in the region. The platform is designed to be user-friendly and accessible, providing farmers and extension agents with the information they need to make informed decisions about planting, harvesting, and managing their crops. With its focus on providing seasonal climate forecasts, Aclimate is helping to improve the sustainability and productivity of agriculture in the region and contributing to the development of a more resilient and sustainable food system.
+                {t("home.introduction")}
               </p>
             </Col>
           </Row>
@@ -147,9 +147,9 @@ function Home() {
         <Row className="m-0 align-items-center h-100">
           <Col className="align-items-center d-flex flex-column hidden" >
 
-            <h2 className="text-center ">We are here</h2>
+            <h2 className="text-center ">{t("home.map-title")}</h2>
             <p className="font-link-body text-center p-subtitle">
-              Come and explore the world of Aclimate! Our innovative platform is changing the way farmers plan and prepare for the growing season ahead. And the best part? It's available in multiple countries, so no matter where you are, you can get information. Take a moment to check out our website and see if Aclimate is operating in your country. We're constantly expanding, so you never know, we might be coming to your area soon.
+              {t("home.map-text")}
             </p>
             <img src={line} alt="line decoration" className="img-fluid opacity-75" style={{ width: "260px", height: "40px" }}></img>
 
@@ -166,8 +166,8 @@ function Home() {
             <img src={julian} alt="Julian" className="img-fluid w-75" style={{}}></img>
           </Col>
           <Col>
-            <h1 className="hidden contact-1">Contact us</h1>
-            <p className="hidden contact-2"><strong>Julian Ramirez | </strong><small>Principal Scientist | Climate Action</small></p>
+            <h1 className="hidden contact-1">{t("home.contact-title")}</h1>
+            <p className="hidden contact-2"><strong>Julian Ramirez | </strong><small>{t("home.contact-role")}</small></p>
             <p className="hidden contact-3">
               <FontAwesomeIcon icon={faEnvelope} /> Email: J.R.Villegas@cgiar.org
             </p>

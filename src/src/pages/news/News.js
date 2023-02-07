@@ -2,11 +2,15 @@ import "./News.css";
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import New from "../../components/new/New";
+import { useTranslation } from "react-i18next"
 
 const URL_NEWS_DATA =
   "https://raw.githubusercontent.com/CIAT-DAPA/aclimate_site/main/data/news.csv";
 
 function News() {
+  //Translation
+  const [t, i18n] = useTranslation("global");
+
   const [news, setNews] = useState([]);
 
   useEffect(() => {
@@ -26,7 +30,7 @@ function News() {
         <div className="container pb-3 px-4 container-news" style={{}}>
           <div className="col-md-6 px-0">
             <h1 className="display-4">
-              News about Aclimate
+              {t("news.news-title")}
             </h1>
           </div>
         </div>

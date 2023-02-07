@@ -2,11 +2,14 @@ import CountryPartner from '../../components/countryPartner/CountryPartner';
 import './Partners.css'
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
+import { useTranslation } from "react-i18next"
 
 const URL_PARTNERS_DATA =
     "https://raw.githubusercontent.com/CIAT-DAPA/aclimate_site/main/data/partners.csv";
 
 function Partners() {
+    //Translation
+    const [t, i18n] = useTranslation("global");
 
     const [groupedPartners, setGroupedPartners] = useState({});
 
@@ -36,7 +39,7 @@ function Partners() {
                 <div className="container pb-3 px-4 container-news" style={{}}>
                     <div className="col-md-6 px-0">
                         <h1 className="display-4">
-                            Partners
+                            {t("partners.partners-title")}
                         </h1>
                     </div>
                 </div>

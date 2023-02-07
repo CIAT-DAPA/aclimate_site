@@ -8,7 +8,17 @@
     "map": {
         "to-site": "Dirigete al sitio"
     },
-    "header": {
-        "hello-world": "Hola Mundo"
+    "home": {
+        "introduction": "Aclimate es una plataforma que proporciona pronósticos climáticos y agroclimáticos a agricultores y extensionistas para ayudarlos a tomar decisiones informadas relacionadas con la agricultura. La plataforma ofrece información precisa y actualizada sobre los patrones meteorológicos esperados y las condiciones climáticas, lo que permite a los agricultores planificar y prepararse para la próxima temporada de cultivo. Al proporcionar pronósticos climáticos estacionales, Aclimate tiene como objetivo reducir los riesgos asociados con la agricultura y aumentar la seguridad alimentaria en la región. La plataforma está diseñada para ser fácil de usar y accesible, brindando a los agricultores y agentes de extensión la información que necesitan para tomar decisiones informadas sobre la siembra, la cosecha y el manejo de sus cultivos. Con su enfoque en proporcionar pronósticos climáticos estacionales, Aclimate está ayudando a mejorar la sostenibilidad y la productividad de la agricultura en la región y contribuyendo al desarrollo de un sistema alimentario más resistente y sostenible.",
+        "map-title": "Nosotros estamos aqui",
+        "map-text": "¡Ven y explora el mundo de Aclimate! Nuestra plataforma innovadora está cambiando la forma en que los agricultores planifican y se preparan para la próxima temporada de cultivo. ¿Y la mejor parte? Está disponible en varios países, por lo que no importa dónde se encuentre, puede obtener información. Tómese un momento para visitar nuestro sitio web y ver si Aclimate está operando en su país. Estamos en constante expansión, por lo que nunca se sabe, es posible que pronto lleguemos a su área.",
+        "contact-title": "Contactanos",
+        "contact-role": "Científico Principal | Acción Climática"
+    },
+    "news": {
+        "news-title": "Noticias sobre Aclimate"
+    },
+    "partners": {
+        "partners-title": "Socios"
     }
 }
