@@ -168,9 +168,9 @@ function Home() {
           <Col>
             <h1 className="hidden contact-1">{t("home.contact-title")}</h1>
             <p className="hidden contact-2"><strong>Julian Ramirez | </strong><small>{t("home.contact-role")}</small></p>
-            <p className="hidden contact-3">
+            <a className="hidden contact-3 text-decoration-none text-light" href="mailto: J.R.Villegas@cgiar.org">
               <FontAwesomeIcon icon={faEnvelope} /> Email: J.R.Villegas@cgiar.org
-            </p>
+            </a>
 
           </Col>
         </Row>

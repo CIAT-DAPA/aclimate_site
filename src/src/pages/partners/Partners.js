@@ -3,6 +3,7 @@ import './Partners.css'
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import { useTranslation } from "react-i18next"
+import Footer from "../../components/footer/Footer";
 
 const URL_PARTNERS_DATA =
     "https://raw.githubusercontent.com/CIAT-DAPA/aclimate_site/main/data/partners.csv";
@@ -49,6 +50,7 @@ function Partners() {
                     < CountryPartner key={country} country={country} partners={groupedPartners[country]} />
                 ))}
             </div>
+            <Footer></Footer>
         </div >
     );
 }

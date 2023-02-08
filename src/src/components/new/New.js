@@ -26,7 +26,7 @@ function New(props) {
     }, []);
     return (
         <a href={props.link} target="_blank" rel="noreferrer" className='link-news '>
-            <Row style={{}} className="m-0 p-4 border-bottom border-2 my-3 hidden-news flex-column flex-lg-row" ref={hiddenElement}>
+            <Row style={{}} className="m-0 p-4 border-bottom border-2 hidden-news flex-column flex-lg-row" ref={hiddenElement}>
                 <Col className='col-1'>
                     <p class="text-muted">{props.date}</p>
                 </Col>

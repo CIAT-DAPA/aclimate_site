@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import { useTranslation } from "react-i18next"
 import New from "../../components/new/New";
+import Footer from "../../components/footer/Footer";
 
 const URL_NEWS_DATA =
     "https://raw.githubusercontent.com/CIAT-DAPA/aclimate_site/main/data/articles.csv";
@@ -41,6 +42,7 @@ function Articles() {
                         <New key={index} title={e.Titulo} date={e.Fecha} summaryEs={e.ResumenEs} summaryEn={e.ResumenEn} link={e.Link} delay={index * 100} />
                     ))
             }
+            <Footer></Footer>
         </div >
     )
 }
