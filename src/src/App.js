@@ -12,9 +12,9 @@ function App() {
       <Menu />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/Partners" element={<Partners />} />
-        <Route path="/News" element={<News />} />
-        <Route path="/Articles" element={<Articles />}></Route>
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/articles" element={<Articles />}></Route>
       </Routes>
     </Router>
   );

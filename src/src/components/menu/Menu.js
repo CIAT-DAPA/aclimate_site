@@ -44,9 +44,9 @@ function Menu() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className='justify-content-end' id="responsive-navbar-nav">
                     <Nav className="justify-content-end">
-                        <Link className="nav-link" to="/News" >{t("menu.news")}</Link>
-                        <Link className="nav-link" to="/Articles" >{t("menu.articles")}</Link>
-                        <Link className="nav-link" to="/Partners " >{t("menu.partners")}</Link>
+                        <Link className="nav-link" to="/news" >{t("menu.news")}</Link>
+                        <Link className="nav-link" to="/articles" >{t("menu.articles")}</Link>
+                        <Link className="nav-link" to="/partners " >{t("menu.partners")}</Link>
                         <a className='nav-link' href='https://docs.aclimate.org/en/latest/' target="_blank" rel="noreferrer">{t("menu.documentation")}</a>
                         <Dropdown as={ButtonGroup}>
                             <Button variant='outline-secondary' className='text-uppercase disabled'>{window.localStorage.getItem("language") || "es"}</Button>
