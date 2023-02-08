@@ -81,7 +81,7 @@ h3 {
 
 .p-subtitle {
   text-shadow: 3px 2px 45px black;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 .dot {
@@ -140,6 +140,12 @@ Medium devices (tablets, 768px and up)
 Large devices (desktops, 992px and up)
 X-Large devices (large desktops, 1200px and up)
 XX-Large devices (larger desktops, 1400px and up) */
+
+@media (min-width: 576px) {
+  .p-subtitle {
+    font-size: 0.8rem;
+  }
+}
 
 @media (min-width: 768px) {
   .text-title-principal {
