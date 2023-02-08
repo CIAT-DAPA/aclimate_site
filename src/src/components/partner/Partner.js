@@ -25,7 +25,7 @@ function Partner(props) {
     return (
 
         <a href={props.partner.Link} target="_blank" rel='noreferrer' className='partner hidden-partner' ref={hiddenElement}>
-            <img class="img-partner " src={props.partner.Logo} alt={props.partner.Socio} />
+            <img className="img-partner " src={props.partner.Logo} alt={props.partner.Socio} />
         </a>
 
     )

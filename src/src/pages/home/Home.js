@@ -144,8 +144,8 @@ function Home() {
       </section>
 
       <section id="section-2" ref={section2Ref}>
-        <Row className="m-0 align-items-center h-100">
-          <Col className="align-items-center d-flex flex-column hidden" >
+        <Row className="m-0 align-items-center h-100 flex-column flex-md-row">
+          <Col className="align-items-center d-flex flex-column hidden justify-content-center" >
 
             <h2 className="text-center ">{t("home.map-title")}</h2>
             <p className="font-link-body text-center p-subtitle">
@@ -161,11 +161,11 @@ function Home() {
         </Row>
       </section>
       <section id="section-3" ref={section3Ref}>
-        <Row className="m-0 align-items-center h-100">
-          <Col className="align-items-center d-flex flex-column hidden">
-            <img src={julian} alt="Julian" className="img-fluid w-75" style={{}}></img>
+        <Row className="m-0 align-items-center h-100 flex-column flex-md-row">
+          <Col className="align-items-center d-flex flex-column hidden justify-content-end">
+            <img src={julian} alt="Julian" className="img-fluid img-julian" style={{}}></img>
           </Col>
-          <Col>
+          <Col className="d-flex flex-column align-items-center">
             <h1 className="hidden contact-1">{t("home.contact-title")}</h1>
             <p className="hidden contact-2"><strong>Julian Ramirez | </strong><small>{t("home.contact-role")}</small></p>
             <a className="hidden contact-3 text-decoration-none text-light" href="mailto: J.R.Villegas@cgiar.org">

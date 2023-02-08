@@ -73,6 +73,10 @@ h3 {
   text-shadow: 3px 2px 45px black;
 }
 
+.img-julian {
+  width: 50%;
+}
+
 /* Small devices (landscape phones, 576px and up)
 Medium devices (tablets, 768px and up)
 Large devices (desktops, 992px and up)
@@ -82,6 +86,14 @@ XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 768px) {
   .text-title-principal {
     font-size: 4em;
+  }
+
+  .img-julian {
+    width: 75%;
+  }
+
+  .p-subtitle {
+    font-size: 1rem;
   }
 }
 
@@ -93,6 +105,7 @@ XX-Large devices (larger desktops, 1400px and up) */
 
 .p-subtitle {
   text-shadow: 3px 2px 45px black;
+  font-size: 0.8rem;
 }
 
 .dot {

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { Button, ButtonGroup, Dropdown } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from "react";
+import SplitButton from 'react-bootstrap/SplitButton';
 
 function Menu() {
 
@@ -48,7 +49,7 @@ function Menu() {
                         <Link className="nav-link" to="/articles" >{t("menu.articles")}</Link>
                         <Link className="nav-link" to="/partners " >{t("menu.partners")}</Link>
                         <a className='nav-link' href='https://docs.aclimate.org/en/latest/' target="_blank" rel="noreferrer">{t("menu.documentation")}</a>
-                        <Dropdown as={ButtonGroup}>
+                        <Dropdown as={ButtonGroup} className="d-block">
                             <Button variant='outline-secondary' className='text-uppercase disabled'>{window.localStorage.getItem("language") || "es"}</Button>
                             <Dropdown.Toggle variant='outline-secondary' split id="dropdown-split-basic" />
                             <Dropdown.Menu>
