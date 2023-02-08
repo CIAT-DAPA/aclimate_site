@@ -29,6 +29,7 @@ function Map() {
       scrollWheelZoom={true}
       style={{ height: "100%" }}
       className="hidden"
+      zoomControl={false}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {countries.map((country, index) => (
