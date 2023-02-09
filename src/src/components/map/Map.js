@@ -30,6 +30,7 @@ function Map() {
       style={{ height: "100%" }}
       className="hidden"
       zoomControl={false}
+      maxBounds={[[79.36, -157.89], [-38.67, 165.44]]}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {countries.map((country, index) => (

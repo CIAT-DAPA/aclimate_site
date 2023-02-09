@@ -24,20 +24,15 @@
 }
 
 #section-2 {
-  /* background-color: #1a2422; */
-  background-image: url(../../assets/images/bg-section2.png);
-  /* background-color: #3a4f31; */
+  background-image: url(../../assets/images/bg-section2.jpg);
+  background-size: cover;
   color: #fefae0;
-  /* color: #bec7c2; */
 }
 
 #section-3 {
-  background-image: url(../../assets/images/bg-section3.png);
-  /* background-color: #A9B388; */
-  /* background-color: #3a4f31; */
+  background-image: url(../../assets/images/bg-section3.jpg);
+  background-size: cover;
   color: #fefae0;
-  /* color: #c9d6e0; */
-  /* color: #bec7c2; */
 }
 
 .main-content {
