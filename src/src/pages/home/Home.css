@@ -134,6 +134,9 @@ h3 {
 .contact-3 {
   transition-delay: 400ms;
 }
+.contact-4 {
+  transition-delay: 600ms;
+}
 
 /* Small devices (landscape phones, 576px and up)
 Medium devices (tablets, 768px and up)
