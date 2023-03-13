@@ -33,7 +33,6 @@
   background-image: url(../../assets/images/bg-section2.png);
   /* background-color: #3a4f31; */
   color: #fefae0;
-  /* color: #bec7c2; */
 }
 
 #section-contact {
@@ -41,8 +40,6 @@
   /* background-color: #A9B388; */
   /* background-color: #3a4f31; */
   color: #fefae0;
-  /* color: #c9d6e0; */
-  /* color: #bec7c2; */
 }
 
 .main-content {
@@ -86,7 +83,7 @@ h3 {
 
 .p-subtitle {
   text-shadow: 3px 2px 45px black;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 
 .dot {
@@ -138,6 +135,10 @@ h3 {
 
 .contact-3 {
   transition-delay: 400ms;
+}
+
+.contact-4 {
+  transition-delay: 600ms;
 }
 
 .img-content {

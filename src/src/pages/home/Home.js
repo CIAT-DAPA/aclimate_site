@@ -13,17 +13,15 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { useTranslation } from "react-i18next"
 
 function Home() {
-
   //Translation
   const [t, i18n] = useTranslation("global");
 
   //Google Analytics
   useEffect(() => {
-    window.gtag('config', 'G-89L0L1GCNH', {
+    window.gtag("config", "G-89L0L1GCNH", {
       page_path: window.location.pathname,
     });
   }, []);
-
 
   //Dot scroll
   const handleClickNav = (id) => {
@@ -41,12 +39,12 @@ function Home() {
 
   const callbackFunction1 = (entries) => {
     const [entry] = entries;
-    setIsVisible1(entry.isIntersecting)
-  }
+    setIsVisible1(entry.isIntersecting);
+  };
   const callbackFunction2 = (entries) => {
     const [entry] = entries;
-    setIsVisible2(entry.isIntersecting)
-  }
+    setIsVisible2(entry.isIntersecting);
+  };
   const callbackFunction3 = (entries) => {
     const [entry] = entries;
     setIsVisible3(entry.isIntersecting)
@@ -59,30 +57,30 @@ function Home() {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.8
-  }
+    threshold: 0.8,
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction1, options);
-    if (section1Ref.current) observer.observe(section1Ref.current)
+    if (section1Ref.current) observer.observe(section1Ref.current);
 
     return () => {
-      if (section1Ref.current) observer.unobserve(section1Ref.current)
-    }
-  }, [section1Ref, options])
+      if (section1Ref.current) observer.unobserve(section1Ref.current);
+    };
+  }, [section1Ref, options]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction2, options);
-    if (section2Ref.current) observer.observe(section2Ref.current)
+    if (section2Ref.current) observer.observe(section2Ref.current);
 
     return () => {
-      if (section2Ref.current) observer.unobserve(section2Ref.current)
-    }
-  }, [section2Ref, options])
+      if (section2Ref.current) observer.unobserve(section2Ref.current);
+    };
+  }, [section2Ref, options]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction3, options);
-    if (section3Ref.current) observer.observe(section3Ref.current)
+    if (section3Ref.current) observer.observe(section3Ref.current);
 
     return () => {
       if (section3Ref.current) observer.unobserve(section3Ref.current)
@@ -104,7 +102,7 @@ function Home() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('show');
+        entry.target.classList.add("show");
       }
       // else {
       //   entry.target.classList.remove('show');
@@ -244,15 +242,17 @@ function Home() {
 
       <section id="section-map" ref={section3Ref}>
         <Row className="m-0 align-items-center h-100 flex-column flex-md-row">
-          <Col className="align-items-center d-flex flex-column hidden justify-content-center" >
-
+          <Col className="align-items-center d-flex flex-column hidden justify-content-center">
             <h2 className="text-center ">{t("home.map-title")}</h2>
             <p className="font-link-body text-center p-subtitle">
               {t("home.map-text")}
             </p>
-            <img src={line} alt="line decoration" className="img-fluid opacity-75" style={{ width: "260px", height: "40px" }}></img>
-
-
+            <img
+              src={line}
+              alt="line decoration"
+              className="img-fluid opacity-75"
+              style={{ width: "260px", height: "40px" }}
+            ></img>
           </Col>
           <Col className="h-100">
             <Map className=""></Map>
@@ -262,15 +262,33 @@ function Home() {
       <section id="section-contact" ref={section4Ref}>
         <Row className="m-0 align-items-center h-100 flex-column flex-md-row">
           <Col className="align-items-center d-flex flex-column hidden justify-content-end">
-            <img src={julian} alt="Julian" className="img-fluid img-julian" style={{}}></img>
+            <img
+              src={julian}
+              alt="Julian"
+              className="img-fluid img-julian"
+              style={{}}
+            ></img>
           </Col>
           <Col className="d-flex flex-column align-items-center">
             <h1 className="hidden contact-1">{t("home.contact-title")}</h1>
-            <p className="hidden contact-2"><strong>Julian Ramirez | </strong><small>{t("home.contact-role")}</small></p>
-            <a className="hidden contact-3 text-decoration-none text-light" href="mailto: J.R.Villegas@cgiar.org">
-              <FontAwesomeIcon icon={faEnvelope} /> Email: J.R.Villegas@cgiar.org
+            <p className="hidden contact-2">
+              <strong>Julian Ramirez | </strong>
+              <small>{t("home.contact-role")}</small>
+            </p>
+            <a
+              className="hidden contact-3 text-decoration-none"
+              style={{ color: '#fefae0' }}
+              href="mailto: J.R.Villegas@cgiar.org"
+            >
+              <FontAwesomeIcon icon={faEnvelope} /> Email:
+              J.R.Villegas@cgiar.org
             </a>
-
+            <img
+              src={line}
+              alt="line decoration"
+              className="img-fluid  hidden contact-4"
+              style={{ width: "260px", height: "40px" }}
+            ></img>
           </Col>
         </Row>
       </section>

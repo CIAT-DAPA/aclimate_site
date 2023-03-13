@@ -1,5 +1,5 @@
 import { Col, Row } from 'react-bootstrap';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './New.css';
 import { useTranslation } from 'react-i18next';
 

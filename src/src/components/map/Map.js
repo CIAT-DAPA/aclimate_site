@@ -30,12 +30,14 @@ function Map() {
       style={{ height: "100%" }}
       className="hidden"
       zoomControl={false}
+      maxBounds={[[79.36, -157.89], [-38.67, 165.44]]}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {countries.map((country, index) => (
         <Marker key={index} position={[country.Latitud, country.Longitud]}>
           <Popup>
-            {country.Pais} <br /><a class="btn btn-primary text-light" href={country.Link} target="_blank" rel="noreferrer" role="button">{t("map.to-site")}</a>
+            {country.Pais} <br />
+            <a className="btn btn-primary btn-sm text-light" href={country.Link} target="_blank" rel="noreferrer" role="button">{t("map.to-site")}</a>
           </Popup>
         </Marker>
       ))
