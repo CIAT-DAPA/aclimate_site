@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.ace010e3.css",
-    "main.js": "/static/js/main.a4c6a66b.js",
+    "main.css": "/static/css/main.9dd3b041.css",
+    "main.js": "/static/js/main.f94bb04e.js",
     "static/js/787.746a1f62.chunk.js": "/static/js/787.746a1f62.chunk.js",
     "static/media/bg.jpg": "/static/media/bg.4355d2042890d093fe53.jpg",
+    "static/media/seasonalForecast.png": "/static/media/seasonalForecast.740b259252eee260c0ea.png",
+    "static/media/cropSimulation.png": "/static/media/cropSimulation.02a1deb66b8f83b61b3b.png",
     "static/media/bg2-wide.jpg": "/static/media/bg2-wide.d36b4d8f7dc5b378e1d1.jpg",
     "static/media/Julian.png": "/static/media/Julian.6d6144e7ca15337d056a.png",
+    "static/media/climateScenario.png": "/static/media/climateScenario.cd386fd4d3dcdaf41187.png",
+    "static/media/subseasonalForecast.png": "/static/media/subseasonalForecast.e156224512731ba0766a.png",
     "static/media/bg-section3.jpg": "/static/media/bg-section3.461f29c135255a38eed3.jpg",
     "static/media/bg-section2.jpg": "/static/media/bg-section2.3e30e339de6ae1479bd8.jpg",
     "static/media/line.svg": "/static/media/line.e9f3b683c4160bea17873efd4078b7e2.svg",
     "index.html": "/index.html",
-    "main.ace010e3.css.map": "/static/css/main.ace010e3.css.map",
-    "main.a4c6a66b.js.map": "/static/js/main.a4c6a66b.js.map",
+    "main.9dd3b041.css.map": "/static/css/main.9dd3b041.css.map",
+    "main.f94bb04e.js.map": "/static/js/main.f94bb04e.js.map",
     "787.746a1f62.chunk.js.map": "/static/js/787.746a1f62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ace010e3.css",
-    "static/js/main.a4c6a66b.js"
+    "static/css/main.9dd3b041.css",
+    "static/js/main.f94bb04e.js"
   ]
 }
