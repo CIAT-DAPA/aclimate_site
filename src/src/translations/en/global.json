@@ -3,13 +3,24 @@
         "news": "News",
         "articles": "Articles",
         "partners": "Partners",
-        "documentation": "Documentation"
+        "documentation": "Documentation",
+        "content": "Content",
+        "glossary": "Glossary"
     },
     "map": {
         "to-site": "Go to the site"
     },
     "home": {
         "introduction": "AClimate is a platform that provides agro-climatic forecasts to farmers and extension agents to help them make informed farming decisions in the face of climate variability. The platform offers accurate and up-to-date information about expected seasonal climate conditions. This information then allows farmers to plan and prepare for the growing season ahead. By providing seasonal climate forecasts, AClimate aims to contribute to de-risking farming systems. The platform is designed to be user-friendly and accessible, providing information to support decisions about planting, harvesting, and managing their crops. With its focus on providing seasonal climate forecasts, AClimate is helping to improve the resilience of farming systems in the countries where it is deployed.",
+        "content-title": "Content",
+        "content-seasonal": "Seasonal Forecast",
+        "seasonal-description": "Seasonal weather predictions give us probabilistic information on the categories - below normal, normal and above normal - over the next 6 months, determined in this information can be obtained obtain different scenarios on a daily basis, which serve as input to enter the crop models.",
+        "content-subseasonal": "Subseasonal Forecast",
+        "subseasonal-description": "Subseasonal weather forecasts provide us with probabilistic information in categories - below normal, normal and above normal - for each week of a month.",
+        "content-climate": "Climate Scenarios",
+        "climate-description": "Climate scenarios are necessary in crop simulation processes. To obtain these scenarios, a statistical process called re-sampling is carried out.",
+        "content-crop": "Crop Simulation",
+        "crop-description": "The process of simulating the behavior of a crop over a period of time is done by using climate scenarios and specific configuration files. For rice cultivation, the Oryza model is used, while for corn and wheat crops, the DSSAT models are used.",
         "map-title": "We are here",
         "map-text": "Come and explore the world of Aclimate! Our innovative platform is changing the way farmers plan and prepare for the growing season ahead. And the best part? It's available in multiple countries, so no matter where you are, you can get information. Take a moment to check out our website and see if Aclimate is operating in your country. We're constantly expanding, so you never know, we might be coming to your area soon.",
         "contact-title": "Contact us",
@@ -23,5 +34,8 @@
     },
     "articles": {
         "articles-title": "Articles about Aclimate"
+    },
+    "glossary": {
+        "glossary-title": "Glossary"
     }
 }

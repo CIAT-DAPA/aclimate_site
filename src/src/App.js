@@ -5,6 +5,7 @@ import Menu from "./components/menu/Menu";
 import Partners from "./pages/partners/Partners";
 import News from "./pages/news/News";
 import Articles from "./pages/articles/Articles";
+import Glossary from "./pages/glossary/Glossary";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="/news" element={<News />} />
         <Route path="/articles" element={<Articles />}></Route>
+        <Route path="/glossary" element={<Glossary />}></Route>
       </Routes>
     </Router>
   );

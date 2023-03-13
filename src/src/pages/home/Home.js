@@ -1,9 +1,13 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Modal, Button } from "react-bootstrap";
 import "./Home.css";
 import React, { useEffect, useRef, useState } from "react";
 import Map from "../../components/map/Map";
 import line from "../../assets/svg/line.svg";
 import julian from "../../assets/images/Julian.png";
+import seasonalForecast from "../../assets/images/seasonalForecast.png"
+import subseasonalForecast from "../../assets/images/subseasonalForecast.png"
+import climateScenarios from "../../assets/images/climateScenario.png"
+import cropSimulation from "../../assets/images/cropSimulation.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { useTranslation } from "react-i18next"
@@ -24,29 +28,16 @@ function Home() {
   //Dot scroll
   const handleClickNav = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    if (id === "section-1") {
-      document.getElementById(1).classList.add("dot-active");
-      document.getElementById(2).classList.remove("dot-active");
-      document.getElementById(3).classList.remove("dot-active");
-    }
-    if (id === "section-2") {
-      document.getElementById(1).classList.remove("dot-active");
-      document.getElementById(2).classList.add("dot-active");
-      document.getElementById(3).classList.remove("dot-active");
-    }
-    if (id === "section-3") {
-      document.getElementById(1).classList.remove("dot-active");
-      document.getElementById(2).classList.remove("dot-active");
-      document.getElementById(3).classList.add("dot-active");
-    }
   };
 
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
+  const section4Ref = useRef(null);
   const [isVisible1, setIsVisible1] = useState(false)
   const [isVisible2, setIsVisible2] = useState(false)
   const [isVisible3, setIsVisible3] = useState(false)
+  const [isVisible4, setIsVisible4] = useState(false)
 
   const callbackFunction1 = (entries) => {
     const [entry] = entries;
@@ -59,6 +50,10 @@ function Home() {
   const callbackFunction3 = (entries) => {
     const [entry] = entries;
     setIsVisible3(entry.isIntersecting)
+  }
+  const callbackFunction4 = (entries) => {
+    const [entry] = entries;
+    setIsVisible4(entry.isIntersecting)
   }
 
   const options = {
@@ -94,6 +89,15 @@ function Home() {
     }
   }, [section3Ref, options])
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction4, options);
+    if (section4Ref.current) observer.observe(section4Ref.current)
+
+    return () => {
+      if (section4Ref.current) observer.unobserve(section4Ref.current)
+    }
+  }, [section4Ref, options])
+
 
   //Animation scroll
 
@@ -108,29 +112,70 @@ function Home() {
     });
   });
 
+  //Modal
+  const [modalShow1, setModalShow1] = React.useState(false)
+  const [modalShow2, setModalShow2] = React.useState(false)
+  const [modalShow3, setModalShow3] = React.useState(false)
+  const [modalShow4, setModalShow4] = React.useState(false)
+
+  const ModalSeasonal = (props) => {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            {props.title}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Row className="align-items-center justify-content-center">
+            <Col xs={6} md={4} className="text-center">
+              <img src={props.image} alt={props.title} className="img-fluid img-julian" style={{}}></img>
+            </Col>
+            <Col xs={12} md={8}>
+              <p>
+                {props.description}
+              </p>
+            </Col>
+          </Row>
+        </Modal.Body>
+      </Modal>
+    )
+  }
+
   const hiddenElements = document.querySelectorAll('.hidden');
   hiddenElements.forEach((el) => observer.observe(el));
 
   return (
     <div className="container-page" style={{ scrollSnapType: "y mandatory" }}>
+
       <div className="dot-container">
         <div
           className={`dot ${isVisible1 ? "dot-active" : ""}`}
           id="1"
-          onClick={() => handleClickNav("section-1")}
+          onClick={() => handleClickNav("section-main")}
         ></div>
         <div
           className={`dot ${isVisible2 ? "dot-active" : ""}`}
           id="2"
-          onClick={() => handleClickNav("section-2")}
+          onClick={() => handleClickNav("section-content")}
         ></div>
         <div
           className={`dot ${isVisible3 ? "dot-active" : ""}`}
           id="3"
-          onClick={() => handleClickNav("section-3")}
+          onClick={() => handleClickNav("section-map")}
+        ></div>
+        <div
+          className={`dot ${isVisible4 ? "dot-active" : ""}`}
+          id="4"
+          onClick={() => handleClickNav("section-contact")}
         ></div>
       </div>
-      <section className="main-content" id="section-1" ref={section1Ref}>
+      <section className="main-content" id="section-main" ref={section1Ref}>
         <Container className="m-0 p-0 d-flex align-items-center">
           <Row className="m-0 justify-content-center">
             <Col className="col-11 hidden">
@@ -143,7 +188,61 @@ function Home() {
         </Container>
       </section>
 
-      <section id="section-2" ref={section2Ref}>
+      <ModalSeasonal
+        show={modalShow1}
+        onHide={() => setModalShow1(false)}
+        title={t("home.content-seasonal")}
+        description={t("home.seasonal-description")}
+        image={seasonalForecast}
+      />
+      <ModalSeasonal
+        show={modalShow2}
+        onHide={() => setModalShow2(false)}
+        title={t("home.content-subseasonal")}
+        description={t("home.subseasonal-description")}
+        image={subseasonalForecast}
+      />
+      <ModalSeasonal
+        show={modalShow3}
+        onHide={() => setModalShow3(false)}
+        title={t("home.content-climate")}
+        description={t("home.climate-description")}
+        image={climateScenarios}
+      />
+      <ModalSeasonal
+        show={modalShow4}
+        onHide={() => setModalShow4(false)}
+        title={t("home.content-crop")}
+        description={t("home.crop-description")}
+        image={cropSimulation}
+      />
+      <section id="section-content" ref={section2Ref}>
+        <Row className="pt-5">
+          <Col className="justify-content-center d-flex hidden pt-5">
+            <h1 className="hidden"><strong>{t("home.content-title")}</strong></h1>
+          </Col>
+        </Row>
+        <Row className="m-0 pt-md-3 mt-md-3 pt-xl-5 mt-xl-5">
+          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3" onClick={() => setModalShow1(true)}>
+            <img src={seasonalForecast} alt="Seasonal Forecast" className="img-fluid img-content" style={{}}></img>
+            <p className="hidden contact-2"><strong>{t("home.content-seasonal")}</strong></p>
+          </Col>
+          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3" onClick={() => setModalShow2(true)}>
+            <img src={subseasonalForecast} alt="Subseasonal Forecast" className="img-fluid img-content" style={{}}></img>
+            <p className="hidden contact-2"><strong>{t("home.content-subseasonal")}</strong></p>
+          </Col>
+          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3" onClick={() => setModalShow3(true)}>
+            <img src={climateScenarios} alt="Climate Scenarios" className="img-fluid img-content" style={{}}></img>
+            <p className="hidden contact-2"><strong>{t("home.content-climate")}</strong></p>
+          </Col>
+          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3" onClick={() => setModalShow4(true)}>
+            <img src={cropSimulation} alt="Crop Simulation" className="img-fluid img-content" style={{}}></img>
+            <p className="hidden contact-2"><strong>{t("home.content-crop")}</strong></p>
+          </Col>
+        </Row>
+      </section>
+
+      <section id="section-map" ref={section3Ref}>
         <Row className="m-0 align-items-center h-100 flex-column flex-md-row">
           <Col className="align-items-center d-flex flex-column hidden justify-content-center" >
 
@@ -160,7 +259,7 @@ function Home() {
           </Col>
         </Row>
       </section>
-      <section id="section-3" ref={section3Ref}>
+      <section id="section-contact" ref={section4Ref}>
         <Row className="m-0 align-items-center h-100 flex-column flex-md-row">
           <Col className="align-items-center d-flex flex-column hidden justify-content-end">
             <img src={julian} alt="Julian" className="img-fluid img-julian" style={{}}></img>

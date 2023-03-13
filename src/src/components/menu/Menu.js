@@ -47,6 +47,7 @@ function Menu() {
                     <Nav className="justify-content-end">
                         <Link className="nav-link" to="/news" >{t("menu.news")}</Link>
                         <Link className="nav-link" to="/articles" >{t("menu.articles")}</Link>
+                        <Link className="nav-link" to="/glossary" >{t("menu.glossary")}</Link>
                         <Link className="nav-link" to="/partners " >{t("menu.partners")}</Link>
                         <a className='nav-link' href='https://docs.aclimate.org/en/latest/' target="_blank" rel="noreferrer">{t("menu.documentation")}</a>
                         <Dropdown as={ButtonGroup} className="d-block">

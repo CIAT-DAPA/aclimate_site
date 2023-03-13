@@ -23,7 +23,12 @@
   /* Firefox */
 }
 
-#section-2 {
+#section-content {
+  background-image: url(../../assets/images/bg-section3.png);
+  color: #fefae0;
+}
+
+#section-map {
   /* background-color: #1a2422; */
   background-image: url(../../assets/images/bg-section2.png);
   /* background-color: #3a4f31; */
@@ -31,7 +36,7 @@
   /* color: #bec7c2; */
 }
 
-#section-3 {
+#section-contact {
   background-image: url(../../assets/images/bg-section3.png);
   /* background-color: #A9B388; */
   /* background-color: #3a4f31; */
@@ -133,6 +138,12 @@ h3 {
 
 .contact-3 {
   transition-delay: 400ms;
+}
+
+.img-content {
+  max-height: 15vw;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 /* Small devices (landscape phones, 576px and up)
