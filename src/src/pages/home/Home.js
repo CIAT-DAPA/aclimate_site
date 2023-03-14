@@ -1,4 +1,4 @@
-import { Col, Container, Row, Modal, Button } from "react-bootstrap";
+import { Col, Container, Row, Modal } from "react-bootstrap";
 import "./Home.css";
 import React, { useEffect, useRef, useState } from "react";
 import Map from "../../components/map/Map";
@@ -176,7 +176,7 @@ function Home() {
       <section className="main-content" id="section-main" ref={section1Ref}>
         <Container className="m-0 p-0 d-flex align-items-center">
           <Row className="m-0 justify-content-center">
-            <Col className="col-11 hidden">
+            <Col className="col-11 hidden box-description">
               <h1 className="text-center text-title-principal"> ACLIMATE</h1>
               <p className="font-link-body text-center p-subtitle">
                 {t("home.introduction")}
@@ -221,21 +221,21 @@ function Home() {
           </Col>
         </Row>
         <Row className="m-0 pt-md-3 mt-md-3 pt-xl-5 mt-xl-5">
-          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3" onClick={() => setModalShow1(true)}>
+          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 " onClick={() => setModalShow1(true)}>
             <img src={seasonalForecast} alt="Seasonal Forecast" className="img-fluid img-content" style={{}}></img>
-            <p className="hidden contact-2"><strong>{t("home.content-seasonal")}</strong></p>
+            <p className="hidden contact-2 item-content"><strong>{t("home.content-seasonal")}</strong></p>
           </Col>
-          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3" onClick={() => setModalShow2(true)}>
+          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 " onClick={() => setModalShow2(true)}>
             <img src={subseasonalForecast} alt="Subseasonal Forecast" className="img-fluid img-content" style={{}}></img>
-            <p className="hidden contact-2"><strong>{t("home.content-subseasonal")}</strong></p>
+            <p className="hidden contact-2 item-content"><strong>{t("home.content-subseasonal")}</strong></p>
           </Col>
-          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3" onClick={() => setModalShow3(true)}>
+          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 " onClick={() => setModalShow3(true)}>
             <img src={climateScenarios} alt="Climate Scenarios" className="img-fluid img-content" style={{}}></img>
-            <p className="hidden contact-2"><strong>{t("home.content-climate")}</strong></p>
+            <p className="hidden contact-2 item-content"><strong>{t("home.content-climate")}</strong></p>
           </Col>
-          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3" onClick={() => setModalShow4(true)}>
+          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 " onClick={() => setModalShow4(true)}>
             <img src={cropSimulation} alt="Crop Simulation" className="img-fluid img-content" style={{}}></img>
-            <p className="hidden contact-2"><strong>{t("home.content-crop")}</strong></p>
+            <p className="hidden contact-2 item-content"><strong>{t("home.content-crop")}</strong></p>
           </Col>
         </Row>
       </section>

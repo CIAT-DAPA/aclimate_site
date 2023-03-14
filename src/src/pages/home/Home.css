@@ -26,20 +26,19 @@
 #section-content {
   background-image: url(../../assets/images/bg-section3.jpg);
   color: #fefae0;
+  background-size: cover;
 }
 
 #section-map {
-  /* background-color: #1a2422; */
   background-image: url(../../assets/images/bg-section2.jpg);
-  /* background-color: #3a4f31; */
   color: #fefae0;
+  background-size: cover;
 }
 
 #section-contact {
   background-image: url(../../assets/images/bg-section3.jpg);
-  /* background-color: #A9B388; */
-  /* background-color: #3a4f31; */
   color: #fefae0;
+  background-size: cover;
 }
 
 .main-content {
@@ -47,29 +46,17 @@
   height: 100vh;
   width: 100%;
   color: white;
-  background-image: url(../../assets/images/bg.jpg);
+  background-image: url(../../assets/images/bg1.jpg);
   background-size: cover;
 }
 
 .container {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   max-width: none !important;
 }
 
-h1 {
-  font-family: "Cormorant Garamond", serif;
-}
-
-h2 {
-  font-family: "Cormorant Garamond", serif;
-}
-
-h3 {
-  font-family: "Cormorant Garamond", serif;
-}
-
 .text-title-principal {
-  letter-spacing: 0.7em;
+  letter-spacing: 0.6em;
   font-size: 2em;
   font-weight: 500;
   text-shadow: 3px 2px 45px black;
@@ -145,7 +132,19 @@ h3 {
   max-height: 15vw;
   min-width: 100px;
   min-height: 100px;
+  transform: scale(0.9);
+  transition: all 0.2s ease-in-out;
 }
+
+.img-content:hover {
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.item-content:hover {
+  cursor: pointer;
+}
+
 
 /* Small devices (landscape phones, 576px and up)
 Medium devices (tablets, 768px and up)

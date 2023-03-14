@@ -1,10 +1,10 @@
-import { Col, Row } from "react-bootstrap";
 import Papa from "papaparse";
 import { useTranslation } from "react-i18next"
 import React, { useState, useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 import "./Glossary.css"
 import Definition from "../../components/definition/Definition";
+import { Col, Row } from "react-bootstrap";
 
 const URL_GLOSSARY_DATA =
     "https://raw.githubusercontent.com/CIAT-DAPA/aclimate_site/main/data/glossary.csv";
@@ -12,6 +12,7 @@ const URL_GLOSSARY_DATA =
 function Glossary() {
     const [t, i18n] = useTranslation("global")
     const [definitions, setDefinitions] = useState([]);
+    const [searchValue, setSearchValue] = useState("");
 
     useEffect(() => {
         Papa.parse(URL_GLOSSARY_DATA, {
@@ -24,6 +25,17 @@ function Glossary() {
         });
     }, []);
 
+    const handleSearchInputChange = (event) => {
+        setSearchValue(event.target.value);
+    };
+
+    function removeAccents(str) {
+        return str
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
+    }
+
     return (
         <div>
             <div className="mb-4 text-white bg-title">
@@ -35,8 +47,26 @@ function Glossary() {
                     </div>
                 </div>
             </div>
+            <Row className="m-0 pe-2">
+                <Col className="col-12">
+                    <input type="search" className="form-control ms-2" placeholder="Search..." aria-label="Search" onChange={handleSearchInputChange} value={searchValue} />
+                </Col>
+            </Row>
             {
+
                 definitions
+                    .filter((item) => {
+                        if (searchValue === "")
+                            return true
+                        const normalizedSearchValue = removeAccents(searchValue);
+                        let normalizedTitle;
+                        if (i18n.language === "es") {
+                            normalizedTitle = removeAccents(item.TituloEs);
+                        } else {
+                            normalizedTitle = removeAccents(item.TituloEn);
+                        }
+                        return normalizedTitle.includes(normalizedSearchValue);
+                    })
                     .sort((a, b) => {
                         if (i18n.language === "es") {
                             if (a.TituloEs < b.TituloEs) return -1;

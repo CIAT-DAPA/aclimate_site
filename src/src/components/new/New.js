@@ -28,7 +28,7 @@ function New(props) {
         <a href={props.link} target="_blank" rel="noreferrer" className='link-news '>
             <Row style={{}} className="m-0 p-4 border-bottom border-2 hidden-news flex-column flex-lg-row" ref={hiddenElement}>
                 <Col className='col-1'>
-                    <p class="text-muted">{props.date}</p>
+                    <p className="text-muted">{props.date}</p>
                 </Col>
                 <Col className="p-0">
                     <h5>{props.title}</h5>

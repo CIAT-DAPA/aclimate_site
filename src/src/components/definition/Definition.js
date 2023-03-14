@@ -26,7 +26,7 @@ function Definition(props) {
     }, []);
     return (
         <Row style={{}} className="m-0 p-4 border-bottom border-2 hidden-news flex-column flex-lg-row" ref={hiddenElement}>
-            <Col className='col-3 p-0'>
+            <Col className='col-12 col-lg-3 p-0'>
                 <h5>{i18n.language === "es" ? props.titleEs : props.titleEn}</h5>
             </Col>
             <Col className="p-0">
