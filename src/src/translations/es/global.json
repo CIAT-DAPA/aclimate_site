@@ -22,18 +22,18 @@
         "content-crop": "Simulación de cultivos",
         "crop-description": "El proceso de simulación del comportamiento de un cultivo a lo largo de un período de tiempo se realiza mediante el uso de escenarios climáticos y archivos de configuración específicos. Para el cultivo de arroz se utiliza el modelo Oryza, mientras que para los cultivos de maíz y trigo se emplean los modelos de DSSAT.",
         "map-title": "Nosotros estamos aquí",
-        "map-text": "¡Ven y explora el mundo de Aclimate! Nuestra plataforma innovadora está cambiando la forma en que los agricultores planifican y se preparan para la próxima temporada de cultivo. ¿Y la mejor parte? Está disponible en varios países, por lo que no importa dónde se encuentre, puede obtener información. Tómese un momento para visitar nuestro sitio web y ver si Aclimate está operando en su país. Estamos en constante expansión, por lo que nunca se sabe, es posible que pronto lleguemos a su área.",
+        "map-text": "¡Ven y explora el mundo de AClimate! Nuestra plataforma innovadora está cambiando la forma en que los agricultores planifican y se preparan para la próxima temporada de cultivo. ¿Y la mejor parte? Está disponible en varios países, por lo que no importa dónde se encuentre, puede obtener información. Tómese un momento para visitar nuestro sitio web y ver si AClimate está operando en su país. Estamos en constante expansión, por lo que nunca se sabe, es posible que pronto lleguemos a su área.",
         "contact-title": "Contáctanos",
         "contact-role": "Científico Principal | Acción Climática"
     },
     "news": {
-        "news-title": "Noticias sobre Aclimate"
+        "news-title": "Noticias sobre AClimate"
     },
     "partners": {
         "partners-title": "Socios"
     },
     "articles": {
-        "articles-title": "Artículos sobre Aclimate"
+        "articles-title": "Artículos sobre AClimate"
     },
     "glossary": {
         "glossary-title": "Glosario"

@@ -41,7 +41,7 @@ function Menu() {
             opacity: `${opacity}`
         }} className='position-fixed w-100 menu p-0' >
             <Container className='py-1'>
-                <Link className="navbar-brand" to="/">Aclimate</Link>
+                <Link className="navbar-brand" to="/">AClimate</Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className='justify-content-end' id="responsive-navbar-nav">
                     <Nav className="justify-content-end">
