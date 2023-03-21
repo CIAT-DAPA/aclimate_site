@@ -46,9 +46,13 @@ function Partners() {
                 </div>
             </div>
             <div className='px-5'>
-                {Object.keys(groupedPartners).map((country) => (
-                    < CountryPartner key={country} country={country} partners={groupedPartners[country]} />
-                ))}
+                {['Colombia', 'Ethiopia', 'Angola', 'Guatemala']
+                    .map((country) => {
+                        if (!groupedPartners[country]) {
+                            return null;
+                        }
+                        return <CountryPartner key={country} country={country} partners={groupedPartners[country]} />
+                    })}
             </div>
             <Footer></Footer>
         </div >
