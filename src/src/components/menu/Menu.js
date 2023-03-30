@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { Button, ButtonGroup, Dropdown } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from "react";
+import Logo from '../../assets/images/Logo.png';
 import SplitButton from 'react-bootstrap/SplitButton';
 
 function Menu() {
@@ -41,7 +42,7 @@ function Menu() {
             opacity: `${opacity}`
         }} className='position-fixed w-100 menu p-0' >
             <Container className='py-1'>
-                <Link className="navbar-brand" to="/">AClimate</Link>
+                <Link className="navbar-brand" to="/"><img src={Logo} className="me-2" style={{width: "40px"}}></img>AClimate</Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className='justify-content-end' id="responsive-navbar-nav">
                     <Nav className="justify-content-end">
