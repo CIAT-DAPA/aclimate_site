@@ -46,7 +46,7 @@ function Partners() {
                 </div>
             </div>
             <div className='px-5'>
-                {['Colombia', 'Ethiopia', 'Angola', 'Guatemala']
+                {['Colombia', 'Ethiopia', 'Angola', 'Guatemala', 'Perú']
                     .map((country) => {
                         if (!groupedPartners[country]) {
                             return null;
