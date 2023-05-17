@@ -4,13 +4,14 @@ import React, { useEffect, useRef, useState } from "react";
 import Map from "../../components/map/Map";
 import line from "../../assets/svg/line.svg";
 import julian from "../../assets/images/Julian.png";
-import seasonalForecast from "../../assets/images/seasonalForecast.png"
-import subseasonalForecast from "../../assets/images/subseasonalForecast.png"
-import climateScenarios from "../../assets/images/climateScenario.png"
-import cropSimulation from "../../assets/images/cropSimulation.png"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { useTranslation } from "react-i18next"
+import seasonalForecast from "../../assets/images/seasonalForecast.png";
+import subseasonalForecast from "../../assets/images/subseasonalForecast.png";
+import climateScenarios from "../../assets/images/climateScenario.png";
+import cropSimulation from "../../assets/images/cropSimulation.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
+import alliance from "../../assets/svg/alliance.svg";
 
 function Home() {
   //Translation
@@ -32,10 +33,10 @@ function Home() {
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
   const section4Ref = useRef(null);
-  const [isVisible1, setIsVisible1] = useState(false)
-  const [isVisible2, setIsVisible2] = useState(false)
-  const [isVisible3, setIsVisible3] = useState(false)
-  const [isVisible4, setIsVisible4] = useState(false)
+  const [isVisible1, setIsVisible1] = useState(false);
+  const [isVisible2, setIsVisible2] = useState(false);
+  const [isVisible3, setIsVisible3] = useState(false);
+  const [isVisible4, setIsVisible4] = useState(false);
 
   const callbackFunction1 = (entries) => {
     const [entry] = entries;
@@ -47,12 +48,12 @@ function Home() {
   };
   const callbackFunction3 = (entries) => {
     const [entry] = entries;
-    setIsVisible3(entry.isIntersecting)
-  }
+    setIsVisible3(entry.isIntersecting);
+  };
   const callbackFunction4 = (entries) => {
     const [entry] = entries;
-    setIsVisible4(entry.isIntersecting)
-  }
+    setIsVisible4(entry.isIntersecting);
+  };
 
   const options = {
     root: null,
@@ -83,19 +84,18 @@ function Home() {
     if (section3Ref.current) observer.observe(section3Ref.current);
 
     return () => {
-      if (section3Ref.current) observer.unobserve(section3Ref.current)
-    }
-  }, [section3Ref, options])
+      if (section3Ref.current) observer.unobserve(section3Ref.current);
+    };
+  }, [section3Ref, options]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction4, options);
-    if (section4Ref.current) observer.observe(section4Ref.current)
+    if (section4Ref.current) observer.observe(section4Ref.current);
 
     return () => {
-      if (section4Ref.current) observer.unobserve(section4Ref.current)
-    }
-  }, [section4Ref, options])
-
+      if (section4Ref.current) observer.unobserve(section4Ref.current);
+    };
+  }, [section4Ref, options]);
 
   //Animation scroll
 
@@ -111,10 +111,10 @@ function Home() {
   });
 
   //Modal
-  const [modalShow1, setModalShow1] = React.useState(false)
-  const [modalShow2, setModalShow2] = React.useState(false)
-  const [modalShow3, setModalShow3] = React.useState(false)
-  const [modalShow4, setModalShow4] = React.useState(false)
+  const [modalShow1, setModalShow1] = React.useState(false);
+  const [modalShow2, setModalShow2] = React.useState(false);
+  const [modalShow3, setModalShow3] = React.useState(false);
+  const [modalShow4, setModalShow4] = React.useState(false);
 
   const ModalSeasonal = (props) => {
     return (
@@ -132,25 +132,27 @@ function Home() {
         <Modal.Body>
           <Row className="align-items-center justify-content-center">
             <Col xs={6} md={4} className="text-center">
-              <img src={props.image} alt={props.title} className="img-fluid img-julian" style={{}}></img>
+              <img
+                src={props.image}
+                alt={props.title}
+                className="img-fluid img-julian"
+                style={{}}
+              ></img>
             </Col>
             <Col xs={12} md={8}>
-              <p>
-                {props.description}
-              </p>
+              <p>{props.description}</p>
             </Col>
           </Row>
         </Modal.Body>
       </Modal>
-    )
-  }
+    );
+  };
 
-  const hiddenElements = document.querySelectorAll('.hidden');
+  const hiddenElements = document.querySelectorAll(".hidden");
   hiddenElements.forEach((el) => observer.observe(el));
 
   return (
     <div className="container-page" style={{ scrollSnapType: "y mandatory" }}>
-
       <div className="dot-container">
         <div
           className={`dot ${isVisible1 ? "dot-active" : ""}`}
@@ -217,25 +219,67 @@ function Home() {
       <section id="section-content" ref={section2Ref}>
         <Row className="pt-5">
           <Col className="justify-content-center d-flex hidden pt-5">
-            <h1 className="hidden"><strong>{t("home.content-title")}</strong></h1>
+            <h1 className="hidden">
+              <strong>{t("home.content-title")}</strong>
+            </h1>
           </Col>
         </Row>
         <Row className="m-0 pt-md-3 mt-md-3 pt-xl-5 mt-xl-5">
-          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 " onClick={() => setModalShow1(true)}>
-            <img src={seasonalForecast} alt="Seasonal Forecast" className="img-fluid img-content" style={{}}></img>
-            <p className="hidden contact-2 item-content"><strong>{t("home.content-seasonal")}</strong></p>
+          <Col
+            className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 "
+            onClick={() => setModalShow1(true)}
+          >
+            <img
+              src={seasonalForecast}
+              alt="Seasonal Forecast"
+              className="img-fluid img-content"
+              style={{}}
+            ></img>
+            <p className="hidden contact-2 item-content">
+              <strong>{t("home.content-seasonal")}</strong>
+            </p>
           </Col>
-          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 " onClick={() => setModalShow2(true)}>
-            <img src={subseasonalForecast} alt="Subseasonal Forecast" className="img-fluid img-content" style={{}}></img>
-            <p className="hidden contact-2 item-content"><strong>{t("home.content-subseasonal")}</strong></p>
+          <Col
+            className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 "
+            onClick={() => setModalShow2(true)}
+          >
+            <img
+              src={subseasonalForecast}
+              alt="Subseasonal Forecast"
+              className="img-fluid img-content"
+              style={{}}
+            ></img>
+            <p className="hidden contact-2 item-content">
+              <strong>{t("home.content-subseasonal")}</strong>
+            </p>
           </Col>
-          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 " onClick={() => setModalShow3(true)}>
-            <img src={climateScenarios} alt="Climate Scenarios" className="img-fluid img-content" style={{}}></img>
-            <p className="hidden contact-2 item-content"><strong>{t("home.content-climate")}</strong></p>
+          <Col
+            className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 "
+            onClick={() => setModalShow3(true)}
+          >
+            <img
+              src={climateScenarios}
+              alt="Climate Scenarios"
+              className="img-fluid img-content"
+              style={{}}
+            ></img>
+            <p className="hidden contact-2 item-content">
+              <strong>{t("home.content-climate")}</strong>
+            </p>
           </Col>
-          <Col className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 " onClick={() => setModalShow4(true)}>
-            <img src={cropSimulation} alt="Crop Simulation" className="img-fluid img-content" style={{}}></img>
-            <p className="hidden contact-2 item-content"><strong>{t("home.content-crop")}</strong></p>
+          <Col
+            className="align-items-center d-flex flex-column hidden col-12 col-md-6 col-xl-3 "
+            onClick={() => setModalShow4(true)}
+          >
+            <img
+              src={cropSimulation}
+              alt="Crop Simulation"
+              className="img-fluid img-content"
+              style={{}}
+            ></img>
+            <p className="hidden contact-2 item-content">
+              <strong>{t("home.content-crop")}</strong>
+            </p>
           </Col>
         </Row>
       </section>
@@ -277,7 +321,7 @@ function Home() {
             </p>
             <a
               className="hidden contact-3 text-decoration-none"
-              style={{ color: '#fefae0' }}
+              style={{ color: "#fefae0" }}
               href="mailto: J.R.Villegas@cgiar.org"
             >
               <FontAwesomeIcon icon={faEnvelope} /> Email:
@@ -288,6 +332,12 @@ function Home() {
               alt="line decoration"
               className="img-fluid  hidden contact-4"
               style={{ width: "260px", height: "40px" }}
+            ></img>
+            <img
+              src={alliance}
+              alt="alliance logo"
+              className="img-fluid hidden"
+              style={{ width: "280px" }}
             ></img>
           </Col>
         </Row>
