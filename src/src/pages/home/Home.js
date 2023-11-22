@@ -140,7 +140,7 @@ function Home() {
               ></img>
             </Col>
             <Col xs={12} md={8}>
-              <p>{props.description}</p>
+              <p className="text-wrap-balance">{props.description}</p>
             </Col>
           </Row>
         </Modal.Body>
@@ -180,7 +180,7 @@ function Home() {
           <Row className="m-0 justify-content-center">
             <Col className="col-11 hidden box-description">
               <h1 className="text-center text-title-principal"> ACLIMATE</h1>
-              <p className="font-link-body text-center p-subtitle">
+              <p className="font-link-body text-center p-subtitle text-wrap-balance">
                 {t("home.introduction")}
               </p>
             </Col>
@@ -288,7 +288,7 @@ function Home() {
         <Row className="m-0 align-items-center h-100 flex-column flex-md-row">
           <Col className="align-items-center d-flex flex-column hidden justify-content-center">
             <h2 className="text-center ">{t("home.map-title")}</h2>
-            <p className="font-link-body text-center p-subtitle">
+            <p className="font-link-body text-center p-subtitle text-wrap-balance">
               {t("home.map-text")}
             </p>
             <img

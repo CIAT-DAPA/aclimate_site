@@ -5,3 +5,7 @@ p {
 a {
   font-family: 'Montserrat', sans-serif;
 }
+
+.text-wrap-balance {
+  text-wrap: balance;
+}

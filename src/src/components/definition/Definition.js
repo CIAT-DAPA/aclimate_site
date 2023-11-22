@@ -30,7 +30,7 @@ function Definition(props) {
                 <h5>{i18n.language === "es" ? props.titleEs : props.titleEn}</h5>
             </Col>
             <Col className="p-0">
-                <p className="fs-6">{i18n.language === "es" ? props.definitionEs : props.definitionEn}</p>
+                <p className="fs-6 text-wrap-balance">{i18n.language === "es" ? props.definitionEs : props.definitionEn}</p>
             </Col>
         </Row>
     )
