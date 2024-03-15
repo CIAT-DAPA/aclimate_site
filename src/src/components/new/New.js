@@ -32,10 +32,10 @@ function New(props) {
     >
       <Row
         style={{}}
-        className="m-0 p-4 border-bottom border-2 hidden-news flex-column flex-lg-row"
+        className="m-0 p-4 border-bottom border-2 hidden-news flex-column flex-lg-row align-items-center "
         ref={hiddenElement}
       >
-        <Col className="col-1">
+        <Col className="col-auto col-md-2 col-xl-1">
           <p className="text-muted">{props.date}</p>
         </Col>
         <Col className="p-0">
