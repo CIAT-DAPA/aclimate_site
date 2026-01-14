@@ -8,6 +8,8 @@ import seasonalForecast from "../../assets/images/seasonalForecast.png";
 import subseasonalForecast from "../../assets/images/subseasonalForecast.png";
 import climateScenarios from "../../assets/images/climateScenario.png";
 import cropSimulation from "../../assets/images/cropSimulation.png";
+import bol1 from "../../assets/images/bol1.jpg";
+import bol3 from "../../assets/images/bol3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
@@ -33,10 +35,12 @@ function Home() {
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
   const section4Ref = useRef(null);
+  const sectionBulletinRef = useRef(null);
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const [isVisible3, setIsVisible3] = useState(false);
   const [isVisible4, setIsVisible4] = useState(false);
+  const [isVisibleBulletin, setIsVisibleBulletin] = useState(false);
 
   const callbackFunction1 = (entries) => {
     const [entry] = entries;
@@ -53,6 +57,10 @@ function Home() {
   const callbackFunction4 = (entries) => {
     const [entry] = entries;
     setIsVisible4(entry.isIntersecting);
+  };
+  const callbackFunctionBulletin = (entries) => {
+    const [entry] = entries;
+    setIsVisibleBulletin(entry.isIntersecting);
   };
 
   const options = {
@@ -96,6 +104,20 @@ function Home() {
       if (section4Ref.current) observer.unobserve(section4Ref.current);
     };
   }, [section4Ref, options]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      callbackFunctionBulletin,
+      options
+    );
+    if (sectionBulletinRef.current)
+      observer.observe(sectionBulletinRef.current);
+
+    return () => {
+      if (sectionBulletinRef.current)
+        observer.unobserve(sectionBulletinRef.current);
+    };
+  }, [sectionBulletinRef, options]);
 
   //Animation scroll
 
@@ -168,6 +190,11 @@ function Home() {
           className={`dot ${isVisible3 ? "dot-active" : ""}`}
           id="3"
           onClick={() => handleClickNav("section-map")}
+        ></div>
+        <div
+          className={`dot ${isVisibleBulletin ? "dot-active" : ""}`}
+          id="bulletin"
+          onClick={() => handleClickNav("section-bulletin")}
         ></div>
         <div
           className={`dot ${isVisible4 ? "dot-active" : ""}`}
@@ -303,16 +330,66 @@ function Home() {
           </Col>
         </Row>
       </section>
+
+      <section id="section-bulletin" ref={sectionBulletinRef}>
+        <Row className="m-0 align-items-center h-100 flex-column flex-md-row">
+          <Col className="align-items-center d-flex flex-column hidden justify-content-center col-12 col-md-6">
+            <div
+              className="position-relative d-flex justify-content-center align-items-center"
+              style={{ width: "100%", height: "400px" }}
+            >
+              <img
+                src={bol1}
+                alt="Bulletin Platform 1"
+                className="img-fluid shadow rounded"
+                style={{
+                  position: "absolute",
+                  top: "10%",
+                  left: "15%",
+                  width: "300px",
+                  zIndex: 1,
+                }}
+              ></img>
+              <img
+                src={bol3}
+                alt="Bulletin Platform 2"
+                className="img-fluid shadow rounded"
+                style={{
+                  position: "absolute",
+                  bottom: "5%",
+                  right: "15%",
+                  width: "300px",
+                  zIndex: 2,
+                }}
+              ></img>
+            </div>
+          </Col>
+          <Col className="align-items-center d-flex flex-column hidden justify-content-center col-12 col-md-6">
+            <h1 className="text-center">{t("home.bulletin-title")}</h1>
+            <p className="font-link-body text-center p-subtitle text-wrap-balance px-5 mb-0">
+              {t("home.bulletin-description")}
+            </p>
+            <img
+              src={line}
+              alt="line decoration"
+              className="img-fluid opacity-75 mb-3"
+              style={{ width: "260px", height: "40px" }}
+            ></img>
+            <a
+              className="mt-3 btn hidden contact-3 text-light"
+              style={{ backgroundColor: "#c4661f", borderColor: "#c4661f" }}
+              href="https://bulletin.aclimate.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t("home.bulletin-button")}
+            </a>
+          </Col>
+        </Row>
+      </section>
+
       <section id="section-contact" ref={section4Ref}>
         <Row className="m-0 align-items-center h-100 flex-column flex-md-row">
-          <Col className="align-items-center d-flex flex-column hidden justify-content-end">
-            <img
-              src={julian}
-              alt="Julian"
-              className="img-fluid img-julian"
-              style={{}}
-            ></img>
-          </Col>
           <Col className="d-flex flex-column align-items-center">
             <h1 className="hidden contact-1">{t("home.contact-title")}</h1>
             <p className="hidden contact-2">
@@ -338,6 +415,14 @@ function Home() {
               alt="alliance logo"
               className="img-fluid hidden"
               style={{ width: "280px" }}
+            ></img>
+          </Col>
+          <Col className="align-items-center d-flex flex-column hidden justify-content-end">
+            <img
+              src={julian}
+              alt="Julian"
+              className="img-fluid img-julian"
+              style={{}}
             ></img>
           </Col>
         </Row>

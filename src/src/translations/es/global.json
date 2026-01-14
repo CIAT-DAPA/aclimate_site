@@ -1,41 +1,44 @@
 {
-    "menu": {
-        "news": "Noticias",
-        "articles": "Artículos",
-        "partners": "Socios",
-        "documentation": "Documentación",
-        "content": "Contenidos",
-        "glossary": "Glosario"
-    },
-    "map": {
-        "to-site": "Dirígete al sitio"
-    },
-    "home": {
-        "introduction": "AClimate es una plataforma que proporciona pronósticos agroclimáticos a agricultores y extensionistas para ayudarlos a tomar decisiones agrícolas informadas frente a la variabilidad climática. La plataforma ofrece información precisa y actualizada sobre las condiciones climáticas estacionales esperadas. Esta información permite a los agricultores planificar y prepararse para la próxima temporada de cultivo. Al proporcionar pronósticos climáticos estacionales, AClimate tiene como objetivo contribuir a reducir los riesgos de los sistemas agrícolas. La plataforma está diseñada para ser fácil de usar y accesible, brindando información para respaldar las decisiones sobre la siembra, la cosecha y el manejo de sus cultivos. Con su enfoque en proporcionar pronósticos climáticos estacionales, AClimate está ayudando a mejorar la resiliencia de los sistemas agrícolas en los países donde se implementa.",
-        "content-title": "Contenidos",
-        "content-seasonal": "Pronóstico estacional",
-        "seasonal-description": "Las predicciones climáticas estacionales nos brindan información probabilística en las categorías - por debajo de lo normal, normal y por encima de lo normal - durante los próximos 6 meses, determinado en esta información se puede obtener diariamente diferentes escenarios, que sirven de entrada para ingresar a los modelos de cultivo.",
-        "content-subseasonal": "Pronóstico subestacional",
-        "subseasonal-description": "Las predicciones climáticas subestacionales nos brindan información probabilística en las categorías - por debajo de lo normal, normal y por encima de lo normal - durante cada semana de un mes.",
-        "content-climate": "Escenarios Climáticos",
-        "climate-description": "Los escenarios climáticos son necesarios en los procesos de simulación de cultivos. Para obtener estos escenarios se lleva a cabo un proceso estadístico llamado re-muestreo.",
-        "content-crop": "Simulación de cultivos",
-        "crop-description": "El proceso de simulación del comportamiento de un cultivo a lo largo de un período de tiempo se realiza mediante el uso de escenarios climáticos y archivos de configuración específicos. Para el cultivo de arroz se utiliza el modelo Oryza, mientras que para los cultivos de maíz y trigo se emplean los modelos de DSSAT.",
-        "map-title": "Nosotros estamos aquí",
-        "map-text": "¡Ven y explora el mundo de AClimate! Nuestra plataforma innovadora está cambiando la forma en que los agricultores planifican y se preparan para la próxima temporada de cultivo. ¿Y la mejor parte? Está disponible en varios países, por lo que no importa dónde se encuentre, puede obtener información. Tómese un momento para visitar nuestro sitio web y ver si AClimate está operando en su país. Estamos en constante expansión, por lo que nunca se sabe, es posible que pronto lleguemos a su área.",
-        "contact-title": "Contáctanos",
-        "contact-role": "Científico Principal | Acción Climática"
-    },
-    "news": {
-        "news-title": "Noticias sobre AClimate"
-    },
-    "partners": {
-        "partners-title": "Socios"
-    },
-    "articles": {
-        "articles-title": "Artículos sobre AClimate"
-    },
-    "glossary": {
-        "glossary-title": "Glosario"
-    }
+  "menu": {
+    "news": "Noticias",
+    "articles": "Artículos",
+    "partners": "Socios",
+    "documentation": "Documentación",
+    "content": "Contenidos",
+    "glossary": "Glosario"
+  },
+  "map": {
+    "to-site": "Dirígete al sitio"
+  },
+  "home": {
+    "introduction": "AClimate es una plataforma que proporciona pronósticos agroclimáticos a agricultores y extensionistas para ayudarlos a tomar decisiones agrícolas informadas frente a la variabilidad climática. La plataforma ofrece información precisa y actualizada sobre las condiciones climáticas estacionales esperadas. Esta información permite a los agricultores planificar y prepararse para la próxima temporada de cultivo. Al proporcionar pronósticos climáticos estacionales, AClimate tiene como objetivo contribuir a reducir los riesgos de los sistemas agrícolas. La plataforma está diseñada para ser fácil de usar y accesible, brindando información para respaldar las decisiones sobre la siembra, la cosecha y el manejo de sus cultivos. Con su enfoque en proporcionar pronósticos climáticos estacionales, AClimate está ayudando a mejorar la resiliencia de los sistemas agrícolas en los países donde se implementa.",
+    "content-title": "Contenidos",
+    "content-seasonal": "Pronóstico estacional",
+    "seasonal-description": "Las predicciones climáticas estacionales nos brindan información probabilística en las categorías - por debajo de lo normal, normal y por encima de lo normal - durante los próximos 6 meses, determinado en esta información se puede obtener diariamente diferentes escenarios, que sirven de entrada para ingresar a los modelos de cultivo.",
+    "content-subseasonal": "Pronóstico subestacional",
+    "subseasonal-description": "Las predicciones climáticas subestacionales nos brindan información probabilística en las categorías - por debajo de lo normal, normal y por encima de lo normal - durante cada semana de un mes.",
+    "content-climate": "Escenarios Climáticos",
+    "climate-description": "Los escenarios climáticos son necesarios en los procesos de simulación de cultivos. Para obtener estos escenarios se lleva a cabo un proceso estadístico llamado re-muestreo.",
+    "content-crop": "Simulación de cultivos",
+    "crop-description": "El proceso de simulación del comportamiento de un cultivo a lo largo de un período de tiempo se realiza mediante el uso de escenarios climáticos y archivos de configuración específicos. Para el cultivo de arroz se utiliza el modelo Oryza, mientras que para los cultivos de maíz y trigo se emplean los modelos de DSSAT.",
+    "map-title": "Nosotros estamos aquí",
+    "map-text": "¡Ven y explora el mundo de AClimate! Nuestra plataforma innovadora está cambiando la forma en que los agricultores planifican y se preparan para la próxima temporada de cultivo. ¿Y la mejor parte? Está disponible en varios países, por lo que no importa dónde se encuentre, puede obtener información. Tómese un momento para visitar nuestro sitio web y ver si AClimate está operando en su país. Estamos en constante expansión, por lo que nunca se sabe, es posible que pronto lleguemos a su área.",
+    "bulletin-title": "Generador de Boletines",
+    "bulletin-description": "¿Necesitas crear un boletín agroclimático? Nuestra plataforma te permite diseñar, revisar y exportar boletines agroclimáticos de manera rápida, flexible y adaptada a tu contexto.",
+    "bulletin-button": "Crear mi boletín",
+    "contact-title": "Contáctanos",
+    "contact-role": "Científico Principal | Acción Climática"
+  },
+  "news": {
+    "news-title": "Noticias sobre AClimate"
+  },
+  "partners": {
+    "partners-title": "Socios"
+  },
+  "articles": {
+    "articles-title": "Artículos sobre AClimate"
+  },
+  "glossary": {
+    "glossary-title": "Glosario"
+  }
 }

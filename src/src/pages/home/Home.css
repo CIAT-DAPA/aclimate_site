@@ -36,6 +36,12 @@
 }
 
 #section-contact {
+  background-image: url(../../assets/images/bg-section2.jpg);
+  color: #fefae0;
+  background-size: cover;
+}
+
+#section-bulletin {
   background-image: url(../../assets/images/bg-section3.jpg);
   color: #fefae0;
   background-size: cover;
@@ -65,8 +71,6 @@
 .img-julian {
   width: 50%;
 }
-
-
 
 .p-subtitle {
   text-shadow: 3px 2px 45px black;
@@ -109,7 +113,6 @@
   transition: all 1s;
 }
 
-
 .show {
   filter: blur(0);
   transform: translateX(0);
@@ -144,7 +147,6 @@
 .item-content:hover {
   cursor: pointer;
 }
-
 
 /* Small devices (landscape phones, 576px and up)
 Medium devices (tablets, 768px and up)

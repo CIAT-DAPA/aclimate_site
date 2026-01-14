@@ -49,7 +49,7 @@ function Articles() {
             summaryEs={e.ResumenEs}
             summaryEn={e.ResumenEn}
             link={e.Link}
-            delay={index * 100}
+            delay={index * 10}
           />
         ))}
       <Footer></Footer>
