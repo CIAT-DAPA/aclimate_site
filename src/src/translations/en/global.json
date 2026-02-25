@@ -1,5 +1,7 @@
 {
   "menu": {
+    "tools": "Tools",
+    "bulletin_builder": "Bulletin Builder",
     "news": "News",
     "articles": "Articles",
     "partners": "Partners",

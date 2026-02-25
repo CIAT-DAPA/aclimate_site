@@ -108,7 +108,7 @@ function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       callbackFunctionBulletin,
-      options
+      options,
     );
     if (sectionBulletinRef.current)
       observer.observe(sectionBulletinRef.current);
