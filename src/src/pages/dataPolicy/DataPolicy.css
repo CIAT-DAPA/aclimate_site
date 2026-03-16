@@ -1,0 +1,51 @@
+.data-policy-title {
+  background-image: url(../../assets/images/bg2-wide.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.data-policy-title-container {
+  padding-top: 6rem !important;
+}
+
+.data-policy-card p,
+.data-policy-card li {
+  line-height: 1.7;
+}
+
+.data-policy-section {
+  border-top: 1px solid #e7ece4;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+}
+
+.data-policy-section h2 {
+  color: #22321a;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.data-policy-card ul {
+  margin-bottom: 0.8rem;
+  padding-left: 1.25rem;
+}
+
+.data-policy-address {
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.data-policy-address a {
+  color: #2e5330;
+  text-decoration: none;
+}
+
+.data-policy-address a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .data-policy-section h2 {
+    font-size: 1.3rem;
+  }
+}

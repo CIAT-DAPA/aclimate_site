@@ -42,5 +42,64 @@
   },
   "glossary": {
     "glossary-title": "Glosario"
+  },
+  "footer": {
+    "rights": "CIAT Todos los derechos reservados",
+    "dataPolicy": "Política de datos",
+    "email": "Email"
+  },
+  "dataPolicy": {
+    "title": "Política de datos",
+    "subtitle": "Consentimiento informado AClimate",
+    "intro1": "El Centro Internacional de Agricultura Tropical (CIAT), como parte de la Alianza de Bioversity International y el CIAT, es responsable de la plataforma AClimate, una herramienta digital que brinda información agroclimática para apoyar la toma de decisiones de diferentes actores y usuarios.",
+    "intro2": "El uso de AClimate implica el tratamiento de datos personales, necesarios para el funcionamiento de la plataforma y para mejorar los servicios que se ofrecen a productores, técnicos y otros usuarios del sector agropecuario. A continuación, le informamos de manera clara y transparente cómo utilizamos su información, y solicitamos su autorización para ello.",
+    "section1": {
+      "title": "1. ¿Qué información se recolecta?",
+      "intro": "Al registrarse o interactuar con la plataforma, AClimate recopila:",
+      "item1": "Nombre y apellidos.",
+      "item2": "Dirección de correo electrónico.",
+      "item3": "Teléfono.",
+      "item4": "Información de navegación generada automáticamente mediante Google Analytics (por ejemplo: dirección IP, tipo de dispositivo, ubicación aproximada, páginas visitadas y duración de la sesión).",
+      "outro": "No se solicitan ni recopilan datos sensibles ni información relacionada con decisiones de carácter personal ajenas al uso de la plataforma."
+    },
+    "section2": {
+      "title": "2. ¿Para qué se utilizan los datos?",
+      "intro": "La información será utilizada exclusivamente para:",
+      "item1": "Crear su cuenta y permitirle acceder a las funcionalidades de AClimate.",
+      "item2": "Enviar comunicaciones relacionadas con pronósticos, boletines, alertas agroclimáticas u otros servicios asociados a la plataforma.",
+      "item3": "Mejorar el desempeño, seguridad y experiencia de uso de AClimate mediante análisis estadísticos y métricas de navegación.",
+      "item4": "Generar reportes agregados destinados a mejorar los servicios agroclimáticos y apoyar la toma de decisiones agropecuarias.",
+      "outro": "En ningún caso se utilizarán sus datos para fines comerciales ajenos a la plataforma ni se realizará venta o transferencia de datos a terceros sin su autorización. Cuando sea necesario compartir información con aliados técnicos o proveedores de servicios tecnológicos, esto se hará bajo contratos con obligaciones de confidencialidad y únicamente para los fines descritos."
+    },
+    "section3": {
+      "title": "3. Uso de herramientas externas",
+      "body": "AClimate utiliza Google Analytics y otras herramientas similares para comprender el uso de la plataforma y optimizar su funcionamiento. Estas herramientas pueden recopilar datos técnicos por medio de cookies o identificadores anónimos. Usted puede gestionar el uso de cookies desde la configuración de su navegador. El uso de estas herramientas se realiza conforme a las políticas de privacidad aplicables."
+    },
+    "section4": {
+      "title": "4. Confidencialidad y almacenamiento",
+      "body": "Sus datos serán tratados de manera confidencial por personal autorizado de la Alianza Bioversity-CIAT. La información se almacenará en servidores seguros y de acuerdo con las políticas internas de protección de datos de la Alianza. Solo se reportará información de forma agregada; nunca se identificarán usuarios individuales en análisis o productos derivados. Los datos se conservarán únicamente durante el tiempo necesario para cumplir los fines descritos o según lo exija la normativa aplicable."
+    },
+    "section5": {
+      "title": "5. Derechos del usuario",
+      "intro": "Usted puede en cualquier momento:",
+      "item1": "Solicitar la actualización o corrección de su información.",
+      "item2": "Retirar su consentimiento y solicitar la eliminación de sus datos, salvo cuando exista una obligación legal de conservarlos.",
+      "item3": "Consultar cómo se están utilizando sus datos.",
+      "item4": "Presentar peticiones, quejas o inquietudes sobre el manejo de su información.",
+      "contactIntro": "Para ejercer estos derechos puede escribir a:",
+      "contactOrg": "Centro Internacional de Agricultura Tropical",
+      "contactAddress": "Dirección: Km 17, recta Cali-Palmira, Valle del Cauca, Colombia"
+    },
+    "section6": {
+      "title": "6. Voluntariedad",
+      "body": "El uso de AClimate y la entrega de información personal es completamente voluntaria. Si decide no proporcionar algunos datos, es posible que ciertas funcionalidades de la plataforma no estén disponibles. El retiro del consentimiento no afectará el uso previo y legítimo de los datos realizado antes de su solicitud."
+    },
+    "section7": {
+      "title": "7. Declaración de consentimiento",
+      "intro": "Al aceptar este consentimiento informado dentro de la plataforma AClimate, usted declara que:",
+      "item1": "Ha leído y comprendido la información aquí presentada.",
+      "item2": "Autoriza el tratamiento de sus datos personales para los fines descritos.",
+      "item3": "Comprende que puede retirar su consentimiento en cualquier momento mediante los canales oficiales."
+    }
   }
 }
