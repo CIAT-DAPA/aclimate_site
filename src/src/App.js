@@ -7,6 +7,7 @@ import News from "./pages/news/News";
 import Articles from "./pages/articles/Articles";
 import Glossary from "./pages/glossary/Glossary";
 import DataPolicy from "./pages/dataPolicy/DataPolicy";
+import CookieBanner from "./components/cookieBanner/CookieBanner";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/glossary" element={<Glossary />}></Route>
         <Route path="/data-policy" element={<DataPolicy />}></Route>
       </Routes>
+      <CookieBanner />
     </Router>
   );
 }

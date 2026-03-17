@@ -21,6 +21,12 @@ function Home() {
 
   //Google Analytics
   useEffect(() => {
+    const cookieConsent = localStorage.getItem("aclimate-cookie-consent");
+
+    if (cookieConsent !== "accepted" || typeof window.gtag !== "function") {
+      return;
+    }
+
     window.gtag("config", "G-89L0L1GCNH", {
       page_path: window.location.pathname,
     });
