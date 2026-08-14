@@ -10,13 +10,16 @@ import Logo from "../../assets/images/Logo.png";
 
 function Menu() {
   const [t, i18n] = useTranslation("global");
+
   const [language, setLanguage] = useState(
     window.localStorage.getItem("language") || "es",
   );
+
   useEffect(() => {
     window.localStorage.setItem("language", language);
     i18n.changeLanguage(language);
   }, [language, i18n]);
+
   const handleLanguageChange = (language) => {
     setLanguage(language);
   };
@@ -45,16 +48,24 @@ function Menu() {
     >
       <Container className="py-1">
         <Link className="navbar-brand d-flex align-items-center" to="/">
-          <img src={Logo} className="me-2" style={{ width: "40px" }} alt="AClimate Logo"></img>
+          <img
+            src={Logo}
+            className="me-2"
+            style={{ width: "40px" }}
+            alt="AClimate Logo"
+          />
           AClimate
         </Link>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
         <Navbar.Collapse
           className="justify-content-end"
           id="responsive-navbar-nav"
         >
           <Nav className="justify-content-end">
-            <NavDropdown title={t("menu.tools")} id="collasible-nav-dropdown">
+            {/* Herramientas */}
+            <NavDropdown title={t("menu.tools")} id="tools-nav-dropdown">
               <NavDropdown.Item
                 href="https://bulletin.aclimate.org/"
                 target="_blank"
@@ -63,26 +74,46 @@ function Menu() {
                 {t("menu.bulletin_builder")}
               </NavDropdown.Item>
             </NavDropdown>
+
             <Link className="nav-link" to="/news">
               {t("menu.news")}
             </Link>
+
             <Link className="nav-link" to="/articles">
               {t("menu.articles")}
             </Link>
+
             <Link className="nav-link" to="/glossary">
               {t("menu.glossary")}
             </Link>
-            <Link className="nav-link" to="/partners ">
+
+            <Link className="nav-link" to="/partners">
               {t("menu.partners")}
             </Link>
-            <a
-              className="nav-link"
-              href="https://docs.aclimate.org/en/latest/"
-              target="_blank"
-              rel="noreferrer"
+
+            {/* Documentación */}
+            <NavDropdown
+              title={t("menu.documentation")}
+              id="documentation-nav-dropdown"
             >
-              {t("menu.documentation")}
-            </a>
+              <NavDropdown.Item
+                href="https://docs.aclimate.org/en/latest/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("menu.documentation_v2")}
+              </NavDropdown.Item>
+
+              <NavDropdown.Item
+                href="https://doc3.aclimate.org/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("menu.documentation_v3")}
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            {/* Idioma */}
             <Dropdown as={ButtonGroup} className="d-block">
               <Button
                 variant="outline-secondary"
@@ -90,15 +121,18 @@ function Menu() {
               >
                 {window.localStorage.getItem("language") || "es"}
               </Button>
+
               <Dropdown.Toggle
                 variant="outline-secondary"
                 split
                 id="dropdown-split-basic"
               />
+
               <Dropdown.Menu>
                 <Dropdown.Item onClick={() => handleLanguageChange("es")}>
                   ES
                 </Dropdown.Item>
+
                 <Dropdown.Item onClick={() => handleLanguageChange("en")}>
                   EN
                 </Dropdown.Item>
@@ -110,4 +144,5 @@ function Menu() {
     </Navbar>
   );
 }
+
 export default Menu;

@@ -7,7 +7,9 @@
     "partners": "Socios",
     "documentation": "Documentación",
     "content": "Contenidos",
-    "glossary": "Glosario"
+    "glossary": "Glosario",
+    "documentation_v2": "Versión 2.0",
+    "documentation_v3": "Versión 3.0"
   },
   "map": {
     "to-site": "Dirígete al sitio"
