@@ -8,8 +8,9 @@
     "documentation": "Documentation",
     "content": "Content",
     "glossary": "Glossary",
-    "documentation_v2": "Version 2.0",
-    "documentation_v3": "Version 3.0"
+    "documentation_v2": "AClimate v2.0",
+    "documentation_v3": "AClimate v3.0",
+    "documentation_bulletin_builder": "Bulletin Builder v1.0"
   },
   "map": {
     "to-site": "Go to the site"

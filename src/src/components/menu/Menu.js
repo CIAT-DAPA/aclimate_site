@@ -111,6 +111,13 @@ function Menu() {
               >
                 {t("menu.documentation_v3")}
               </NavDropdown.Item>
+              <NavDropdown.Item
+                href="http://docsbulletin.aclimate.org/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("menu.documentation_bulletin_builder")}
+              </NavDropdown.Item>
             </NavDropdown>
 
             {/* Idioma */}
